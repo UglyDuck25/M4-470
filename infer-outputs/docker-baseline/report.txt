@@ -1,0 +1,143 @@
+#0
+src/main/java/com/google/gson/JsonStreamParser.java:51: warning: Thread Safety Violation
+  Unprotected write. Non-private method `JsonStreamParser.next()` indirectly writes to field `this.parser.limit` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not. 
+  49.    * @since 1.4
+  50.    */
+  51. > public final class JsonStreamParser implements Iterator<JsonElement> {
+  52.     private final JsonReader parser;
+  53.     private final Object lock;
+
+#1
+src/main/java/com/google/gson/JsonStreamParser.java:89: warning: Thread Safety Violation
+  Unprotected write. Non-private method `JsonStreamParser.next()` indirectly writes to field `this.parser.limit` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not. 
+  87.   
+  88.       try {
+  89. >       return Streams.parse(parser);
+  90.       } catch (StackOverflowError | OutOfMemoryError e) {
+  91.         throw new JsonParseException("Failed parsing JSON source to Json", e);
+
+#2
+src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:142: warning: Thread Safety Violation
+  Read/Write race. Non-private method `DefaultDateTypeAdapter.write(...)` indirectly reads without synchronization from `out.deferredName`, which races with the write in method `DefaultDateTypeAdapter.write(...)`.
+ Reporting because this access may occur on a background thread. 
+  140.     public void write(JsonWriter out, Date value) throws IOException {
+  141.       if (value == null) {
+  142. >       out.nullValue();
+  143.         return;
+  144.       }
+
+#3
+src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:152: warning: Thread Safety Violation
+  Unprotected write. Non-private method `DefaultDateTypeAdapter.write(...)` indirectly writes to field `out.deferredName` outside of synchronization.
+ Reporting because this access may occur on a background thread. 
+  150.         dateFormatAsString = dateFormat.format(value);
+  151.       }
+  152. >     out.value(dateFormatAsString);
+  153.     }
+  154.   
+
+#4
+src/main/java/com/google/gson/internal/sql/SqlDateTypeAdapter.java:58: warning: Thread Safety Violation
+  Unprotected write. Non-private method `SqlDateTypeAdapter.read(...)` indirectly writes to field `in.limit` outside of synchronization.
+ Reporting because this access may occur on a background thread. 
+  56.     @Override
+  57.     public java.sql.Date read(JsonReader in) throws IOException {
+  58. >     if (in.peek() == JsonToken.NULL) {
+  59.         in.nextNull();
+  60.         return null;
+
+#5
+src/main/java/com/google/gson/internal/sql/SqlDateTypeAdapter.java:59: warning: Thread Safety Violation
+  Unprotected write. Non-private method `SqlDateTypeAdapter.read(...)` indirectly writes to field `in.pathIndices.[_]` outside of synchronization.
+ Reporting because this access may occur on a background thread. 
+  57.     public java.sql.Date read(JsonReader in) throws IOException {
+  58.       if (in.peek() == JsonToken.NULL) {
+  59. >       in.nextNull();
+  60.         return null;
+  61.       }
+
+#6
+src/main/java/com/google/gson/internal/sql/SqlDateTypeAdapter.java:62: warning: Thread Safety Violation
+  Read/Write race. Non-private method `SqlDateTypeAdapter.read(...)` indirectly reads without synchronization from `in.pathIndices.[_]`, which races with the write in method `SqlDateTypeAdapter.read(...)`.
+ Reporting because this access may occur on a background thread. 
+  60.         return null;
+  61.       }
+  62. >     String s = in.nextString();
+  63.       synchronized (this) {
+  64.         TimeZone originalTimeZone = format.getTimeZone(); // Save the original time zone
+
+#7
+src/main/java/com/google/gson/internal/sql/SqlDateTypeAdapter.java:80: warning: Thread Safety Violation
+  Read/Write race. Non-private method `SqlDateTypeAdapter.write(...)` indirectly reads without synchronization from `out.deferredName`, which races with the write in method `SqlDateTypeAdapter.write(...)`.
+ Reporting because this access may occur on a background thread. 
+  78.     public void write(JsonWriter out, java.sql.Date value) throws IOException {
+  79.       if (value == null) {
+  80. >       out.nullValue();
+  81.         return;
+  82.       }
+
+#8
+src/main/java/com/google/gson/internal/sql/SqlDateTypeAdapter.java:87: warning: Thread Safety Violation
+  Unprotected write. Non-private method `SqlDateTypeAdapter.write(...)` indirectly writes to field `out.deferredName` outside of synchronization.
+ Reporting because this access may occur on a background thread. 
+  85.         dateString = format.format(value);
+  86.       }
+  87. >     out.value(dateString);
+  88.     }
+  89.   }
+
+#9
+src/main/java/com/google/gson/internal/sql/SqlTimeTypeAdapter.java:59: warning: Thread Safety Violation
+  Unprotected write. Non-private method `SqlTimeTypeAdapter.read(...)` indirectly writes to field `in.limit` outside of synchronization.
+ Reporting because this access may occur on a background thread. 
+  57.     @Override
+  58.     public Time read(JsonReader in) throws IOException {
+  59. >     if (in.peek() == JsonToken.NULL) {
+  60.         in.nextNull();
+  61.         return null;
+
+#10
+src/main/java/com/google/gson/internal/sql/SqlTimeTypeAdapter.java:60: warning: Thread Safety Violation
+  Unprotected write. Non-private method `SqlTimeTypeAdapter.read(...)` indirectly writes to field `in.pathIndices.[_]` outside of synchronization.
+ Reporting because this access may occur on a background thread. 
+  58.     public Time read(JsonReader in) throws IOException {
+  59.       if (in.peek() == JsonToken.NULL) {
+  60. >       in.nextNull();
+  61.         return null;
+  62.       }
+
+#11
+src/main/java/com/google/gson/internal/sql/SqlTimeTypeAdapter.java:63: warning: Thread Safety Violation
+  Read/Write race. Non-private method `SqlTimeTypeAdapter.read(...)` indirectly reads without synchronization from `in.pathIndices.[_]`, which races with the write in method `SqlTimeTypeAdapter.read(...)`.
+ Reporting because this access may occur on a background thread. 
+  61.         return null;
+  62.       }
+  63. >     String s = in.nextString();
+  64.       synchronized (this) {
+  65.         TimeZone originalTimeZone = format.getTimeZone(); // Save the original time zone
+
+#12
+src/main/java/com/google/gson/internal/sql/SqlTimeTypeAdapter.java:81: warning: Thread Safety Violation
+  Read/Write race. Non-private method `SqlTimeTypeAdapter.write(...)` indirectly reads without synchronization from `out.deferredName`, which races with the write in method `SqlTimeTypeAdapter.write(...)`.
+ Reporting because this access may occur on a background thread. 
+  79.     public void write(JsonWriter out, Time value) throws IOException {
+  80.       if (value == null) {
+  81. >       out.nullValue();
+  82.         return;
+  83.       }
+
+#13
+src/main/java/com/google/gson/internal/sql/SqlTimeTypeAdapter.java:88: warning: Thread Safety Violation
+  Unprotected write. Non-private method `SqlTimeTypeAdapter.write(...)` indirectly writes to field `out.deferredName` outside of synchronization.
+ Reporting because this access may occur on a background thread. 
+  86.         timeString = format.format(value);
+  87.       }
+  88. >     out.value(timeString);
+  89.     }
+  90.   }
+
+Found 14 issues
+                        Issue Type(ISSUED_TYPE_ID): #
+  Thread Safety Violation(THREAD_SAFETY_VIOLATION): 14
