@@ -25,7 +25,7 @@ docker build -t m4-470 .
 
 2. **Run the Docker container interactively, mounting the Gson directory for easy access**:
 ```bash
-docker run -it m4-470:latest /bin/bash
+docker run -it --name m4 m4-470:latest /bin/bash
 ```
 - it → interactive terminal
 - v /gson:/gson → mounts your local /gson directory to /gson inside the container
@@ -47,6 +47,19 @@ cd /details
 mvn clean install
 infer run -- mvn clean install
 ```
+
+## To leave Container:
+```bash
+exit
+```
+
+## To Copy work done in Container to Host Device
+```bash
+docker cp m4:/m4-output ./
+```
+- m4 -> is the name of the Container to Copy from
+- /m4-output -> is the pathname of the destination in your host machine
+
 ### Generated Output Files
 The container automatically generates the following files for reproducibility and analysis:
 - commit_hash.txt → current Git commit hash of Gson
