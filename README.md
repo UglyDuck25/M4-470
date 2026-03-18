@@ -25,7 +25,7 @@ docker build -t m4-470 .
 
 2. **Run the Docker container interactively, mounting the Gson directory for easy access**:
 ```bash
-docker run -it -v /gson:/gson m4-470:latest /bin/bash
+docker run -it m4-470:latest /bin/bash
 ```
 - it → interactive terminal
 - v /gson:/gson → mounts your local /gson directory to /gson inside the container
@@ -37,9 +37,9 @@ cd /gson
 ls
 ```
 
-## Verify Infer installation:
+## Environment details stored in:
 ```bash
-infer --version
+cd /details
 ```
 
 ## Build Gson and run Infer analysis manually (if needed):

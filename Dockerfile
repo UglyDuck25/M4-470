@@ -30,9 +30,6 @@ RUN INFER_VERSION=v1.2.0; \
 # Install infer
 ENV PATH=/infer/bin:${PATH}
 
-# Verify Infer installation
-RUN infer --version > /m4/infer_version.txt
-
 # 2. Clone Gson repository
 RUN git clone https://github.com/google/gson.git
 WORKDIR /m4/gson
@@ -41,13 +38,18 @@ WORKDIR /m4/gson
 RUN git rev-parse HEAD > commit_hash.txt
 
 # 4. Record environment details
-RUN uname -a > /m4/os_info.txt
-RUN java -version > /m4/java_version.txt 2>&1
-RUN mvn -version > /m4/maven_version.txt
-RUN git remote get-url origin > /m4/repo_url.txt
+WORKDIR /m4/details
+
+# Verify installation
+RUN infer --version > /m4/details/infer_version.txt
+RUN uname -a > /m4/details/os_info.txt
+RUN java -version > /m4/details/java_version.txt 2>&1
+RUN mvn -version > /m4/details/maven_version.txt
 
 # 5. Count LOC
-RUN cloc . > /m4/loc.txt
+WORKDIR /m4/gson
+RUN git remote get-url origin > /m4/details/repo_url.txt
+RUN cloc . > /m4/details/loc.txt
 
 # 6. Build GSON (verify build)
 # RUN mvn clean verify
