@@ -1,5 +1,5 @@
-# CMPT 470 – Milestone 4: Static Analysis with Infer
-## Tech Titans – Gson Analysis
+# CMPT 470: Milestone 4: Static Analysis with Infer
+## Tech Titans: Gson Analysis
 
 ## Overview
 This project runs Infer static analysis on the Gson library inside a Docker container.
