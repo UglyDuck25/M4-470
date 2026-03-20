@@ -1,52 +1,62 @@
-# Installation Guide
+# CMPT 470 – Milestone 4: Static Analysis with Infer
+## Tech Titans – Gson Analysis
 
-## CMPT 470 – Static Analysis with Infer
-
-This assignment is designed to be performed **inside a Docker container** on a Linux OS. The container handles all setup, including dependencies, Infer installation, and the Gson repository.
-
-### Features
-
-- Installs all necessary dependencies:
-  - `curl`, `git`, `maven`, `make`, `cloc`, `sqlite3`, `xz-utils`, `zlib1g-dev`, `openjdk-17-jdk-headless`
-- Installs the **latest version of Infer** (v1.2.0)
-- Clones the **Gson repository**
-- Builds Gson and runs static analysis using Infer
-- Captures environment details and project metrics (LOC, commit hash, Java/Maven version)
+## Overview
+This project runs Infer static analysis on the Gson library inside a Docker container.
+Everything is automated, dependencies, Infer, and Gson are all set up inside the container.
 
 ---
 
-### Usage
+## Setup
 
-1. **Build the Docker image**:
+### 1. Build the Docker image
+```
+docker build -t infer-gson .
+```
+This will take a few minutes the first time.
 
-```bash
-docker build -t m4-470 .
+### 2. Run the container
+```
+docker run -it --name m4 infer-gson bash
+```
+You will be inside the container when you see `root@...:/m4/gson#`
+
+---
+
+## Running Infer Analysis
+
+**Important:** The normal `infer run -- mvn` command does NOT work with Gson
+due to a known incompatibility with Gson's module-info.java file.
+Use the following steps instead:
+
+### Step 1 - Navigate to the gson submodule
+```
+cd /m4/gson/gson
 ```
 
-2. **Run the Docker container interactively, mounting the Gson directory for easy access**:
-```bash
-docker run -it m4-470:latest /bin/bash
+### Step 2 - Build Gson
 ```
-- it → interactive terminal
-- v /gson:/gson → mounts your local /gson directory to /gson inside the container
-
-3. **Inside the Container**
-## Navigate to the cloned repository:
-```bash
-cd /gson
-ls
+mvn clean compile -DskipTests
 ```
 
-## Environment details stored in:
-```bash
-cd /details
+### Step 3 - Get dependencies
+```
+CP=$(find ~/.m2 -name "*.jar" | tr '\n' ':')
 ```
 
-## Build Gson and run Infer analysis manually (if needed):
-```bash
-mvn clean install
-infer run -- mvn clean install
+### Step 4 - Run Infer
 ```
+infer run -- javac -cp "$CP" -source 11 -target 11 \
+  $(find src/main/java -name "*.java" ! -name "module-info.java") \
+  $(find target/generated-sources -name "*.java")
+```
+
+### Expected Output
+```
+Found 14 issues
+Thread Safety Violation: 14
+```
+
 ### Generated Output Files
 The container automatically generates the following files for reproducibility and analysis:
 - commit_hash.txt → current Git commit hash of Gson
