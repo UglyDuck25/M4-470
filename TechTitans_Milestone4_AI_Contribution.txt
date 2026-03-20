@@ -22,4 +22,6 @@ AI Usage:
 
 5. Ademola Obaleye (zyq049)
 Contribution: 22%
-AI Usage:
+AI Usage: AI was used for writing assistance including helping summarize results, improve wording, 
+and draft sections of the report. All experimental work, tool execution, collected outputs, 
+and reported results are based on actually running infer.
