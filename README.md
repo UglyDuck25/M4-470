@@ -46,7 +46,7 @@ CP=$(find ~/.m2 -name "*.jar" | tr '\n' ':')
 
 ### Step 4 - Run Infer
 ```
-infer run -- javac -cp "$CP" -source 11 -target 11 \
+time infer run -- javac -cp "$CP" -source 11 -target 11 \
   $(find src/main/java -name "*.java" ! -name "module-info.java") \
   $(find target/generated-sources -name "*.java")
 ```
