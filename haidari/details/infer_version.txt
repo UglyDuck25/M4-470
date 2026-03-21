@@ -1,0 +1,2 @@
+Infer version v1.2.0
+Copyright 2009 - present Facebook. All Rights Reserved.
