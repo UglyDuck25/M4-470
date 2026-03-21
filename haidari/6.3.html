@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>6.3.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="experiment-63-manual-triage-of-findings">Experiment 6.3: Manual Triage of Findings</h1>
+<h2 id="issue-selection">Issue Selection</h2>
+<p>All 14 issues reported by Infer are of the type &quot;Thread Safety Violation&quot;. Since there is only one issue category present, I have selected two issues from this category for analysis:</p>
+<ul>
+<li><strong>Issue A</strong>: Issue #0 (most frequent category: Thread Safety Violation)</li>
+<li><strong>Issue B</strong>: Issue #2 (same category, different issue for comparison)</li>
+</ul>
+<h2 id="issue-a-thread-safety-violation-in-jsonstreamparser">Issue A: Thread Safety Violation in JsonStreamParser</h2>
+<h3 id="issue-type-and-name">Issue Type and Name</h3>
+<ul>
+<li><strong>Type</strong>: Thread Safety Violation</li>
+<li><strong>Name</strong>: Unprotected write. Non-private method <code>JsonStreamParser.next()</code> indirectly writes to field <code>this.parser.limit</code> outside of synchronization.</li>
+</ul>
+<h3 id="file-and-method-name">File and Method Name</h3>
+<ul>
+<li><strong>File</strong>: <code>src/main/java/com/google/gson/JsonStreamParser.java</code></li>
+<li><strong>Method</strong>: <code>next()</code> (indirectly through <code>Streams.parse(parser)</code>)</li>
+</ul>
+<h3 id="relevant-code-snippet">Relevant Code Snippet</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JsonStreamParser</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Iterator</span>&lt;<span class="hljs-title">JsonElement</span>&gt; </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> JsonReader parser;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Object lock;
+
+    <span class="hljs-comment">// ... constructor ...</span>
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> JsonElement <span class="hljs-title">next</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// ... hasNext check ...</span>
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">return</span> Streams.parse(parser);  <span class="hljs-comment">// Line 89: Indirect write to parser.limit</span>
+        } <span class="hljs-keyword">catch</span> (StackOverflowError | OutOfMemoryError e) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> JsonParseException(<span class="hljs-string">"Failed parsing JSON source to Json"</span>, e);
+        }
+    }
+}
+</div></code></pre>
+<h3 id="excerpt-of-the-infer-trace">Excerpt of the Infer Trace</h3>
+<pre class="hljs"><code><div>src/main/java/com/google/gson/JsonStreamParser.java:51: warning: Thread Safety Violation
+  Unprotected write. Non-private method `JsonStreamParser.next()` indirectly writes to field `this.parser.limit` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not. 
+  49.    * @since 1.4
+  50.    */
+  51. &gt; public final class JsonStreamParser implements Iterator&lt;JsonElement&gt; {
+  52.     private final JsonReader parser;
+  53.     private final Object lock;
+</div></code></pre>
+<h3 id="execution-path-evidence-table">Execution Path Evidence Table</h3>
+<table>
+<thead>
+<tr>
+<th>Trace Step</th>
+<th>File</th>
+<th>Line</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value introduced</td>
+<td><code>src/main/java/com/google/gson/JsonStreamParser.java</code></td>
+<td>52</td>
+<td>The <code>parser</code> field (JsonReader) is introduced as a private final field, shared across method calls. Value is declared in the constructor using an external call to <code>src/main/java/com/google/gson/stream/JsonReader.java</code> which creates a new instance that reads a JSON-encoded stream.</td>
+</tr>
+<tr>
+<td>Conditional branch</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>No conditional branch in the reported trace; the issue occurs on method entry.</td>
+</tr>
+<tr>
+<td>Risky state appears</td>
+<td><code>src/main/java/com/google/gson/JsonStreamParser.java</code></td>
+<td>89</td>
+<td>The next() method in JsonStreamParser calls Streams.parse(parser), which performs JSON parsing operations on the JsonReader instance (parser). During parsing, the reader may need to read more data from the underlying stream, triggering buffer management that modifies the limit field (an internal buffer position/length tracker in JsonReader). This happens indirectly through methods like fillBuffer(), where limit is updated to reflect new data read into the buffer.</td>
+</tr>
+<tr>
+<td>Failure location</td>
+<td><code>src/main/java/com/google/gson/stream/JsonReader.java</code></td>
+<td>1492</td>
+<td>The unprotected write to <code>parser.limit</code> occurs here, potentially racing with other threads. RacerD/Infer is flagging an unprotected write through JsonStreamParser.next() to parser.limit via Streams.parse(parser) → JsonReader methods like peek()/doPeek() → nextNonWhitespace() → fillBuffer().</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trace-understanding-questions">Trace Understanding Questions</h3>
+<h4 id="t1-first-feasible-failure-point">T1. First Feasible Failure Point</h4>
+<ul>
+<li><strong>File and line number</strong>: <code>src/main/java/com/google/gson/JsonStreamParser.java</code>, line 89 (<code>return Streams.parse(parser);</code>)</li>
+<li><strong>Explanation</strong>: This is the earliest point where the failure becomes possible. The <code>Streams.parse(parser)</code> call modifies the <code>parser.limit</code> field, and since the <code>next()</code> method is not synchronized, concurrent calls to <code>next()</code> or other methods accessing <code>parser</code> could lead to a race condition. The class has a <code>lock</code> field but does not use it, making this the first risky operation.</li>
+</ul>
+<h4 id="t2-infer-assumption">T2. Infer Assumption</h4>
+<ul>
+<li><strong>Assumption</strong>: Infer assumes that the <code>JsonStreamParser</code> instance can be accessed concurrently by multiple threads, and that there is another thread performing operations on the same <code>parser</code> object that access or modify <code>parser.limit</code>.</li>
+<li><strong>Explanation and code location</strong>: This assumption is based on the presence of the <code>parser</code> field (line 52) being a shared mutable object. The code does not synchronize access to <code>parser</code>, and Infer models potential concurrent execution paths where one thread calls <code>next()</code> while another accesses <code>parser.limit</code> elsewhere or that multiple threads are simultaneuosly executing <code>next()</code>.</li>
+</ul>
+<h4 id="t3-refactoring-robustness">T3. Refactoring Robustness</h4>
+<ul>
+<li><strong>Semgrep</strong>: Semgrep (pattern-matching based) would likely NOT detect the issue if its rules are simple and only pattern-based. If Semgrep was customized to define rules with <code>threadid()</code> or a concurrent rule package was used, it could detect the issue. However, if the rules are tied to specific method names or exact code patterns, a refactor like renaming <code>next()</code> to <code>getNextElement()</code> might evade detection. Meaning semgrep is not path-sensitive unless custom pattern engine.</li>
+<li><strong>Infer</strong>: If the change is a behavior-preserving refactoring Infer <em>would still report the issue</em> because it performs path-sensitive analysis. The core problem is the unsynchronized access to shared state (<code>parser.limit</code>), so renaming the method or extracting variables wouldn't change the execution path or eliminate the race condition. However:
+Assuming that thread issues are checked solely by RaceD,
+Infer uses RaceD to detect concurrency issues, and as the documentation states, certain limitations have been listed:
+(1) It looks for races involving syntactically identical access paths, and misses races due to aliasing
+(2) It misses races that arise from a locally declared object escaping its scope
+(3) It uses a boolean locks abstraction, and so misses races where two accesses are mistakenly protected by different locks
+(4) It assumes a deep ownership model, which misses races where local objects refer to or contain non-owned objects.
+(5) It avoids reasoning about weak memory and Java's volatile keyword
+Additionally, RaceD is triggered via:
+(1) Explicitly annotating a class/method with @ThreadSafe and
+(2) using a lock via the synchronized keyword. In both cases, RacerD will look for concurrency issues in the code containing the signal and all of its dependencies. In particular, it will report races between any non-private methods of the same class that can perform conflicting accesses. Annotating a class/interface with @ThreadSafe also triggers checking for all of the subclasses of the class/implementations of the interface.
+If the programmer would remove the lock/sync keywords, remove any @ThreadSafe flags, <em>RaceD might not detect the issue</em>.</li>
+<li><strong>Reasoning</strong>: Semgrep relies on syntactic patterns, while Infer traces data flow and synchronization, making it more robust to superficial changes but sensitive to actual concurrency issues.</li>
+</ul>
+<h3 id="classification">Classification</h3>
+<ul>
+<li><strong>Classification</strong>: Likely false positive</li>
+<li><strong>Justification</strong>: Some of Gson's classes are explicitly documented as not thread-safe or conditionally thread-safe: In <code>JsonStreamParser</code> the authors write:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment">/*
+ * &lt;p&gt;This class is conditionally thread-safe (see Item 70, Effective Java second edition). To
+ * properly use this class across multiple threads, you will need to add some external
+ * synchronization. For example:
+ *
+ * &lt;pre&gt;
+ * JsonStreamParser parser = new JsonStreamParser("['first'] {'second':10} 'third'");
+ * JsonElement element;
+ * synchronized (parser) {  // synchronize on an object shared by threads
+ *   if (parser.hasNext()) {
+ *     element = parser.next();
+ *   }
+ * }
+ * &lt;/pre&gt;.  
+</span></div></code></pre>
+<p>and in <code>JsonReader</code> they write:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">/*
+ * &lt;p&gt;Each {@code JsonReader} may be used to read a single JSON stream. Instances of this class are
+ * not thread safe.
+</span></div></code></pre>
+<p>The <code>JsonStreamParser</code> class is designed for single-threaded use, and the presence of an unused <code>lock</code> field suggests incomplete thread-safety implementation rather than an intended defect. In practice, users are expected to synchronize externally or use separate instances per thread.</p>
+<h3 id="fix-validation">Fix Validation</h3>
+<p>Since this is classified as a false positive, no fix is necessary. However, for demonstration, I added synchronization using the existing <code>lock</code> field: <code>synchronized (lock) { return Streams.parse(parser); }</code>. This modified the <code>next()</code> method in <code>JsonStreamParser.java</code> to synchronize on <code>lock</code>.</p>
+<pre class="hljs"><code><div>  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> JsonElement <span class="hljs-title">next</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> JsonParseException </span>{
+    <span class="hljs-keyword">synchronized</span> (lock) {
+      <span class="hljs-keyword">if</span> (!hasNext()) {
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> NoSuchElementException();
+      }
+
+      <span class="hljs-keyword">try</span> {
+        <span class="hljs-keyword">return</span> Streams.parse(parser);
+      } <span class="hljs-keyword">catch</span> (StackOverflowError | OutOfMemoryError e) {
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> JsonParseException(<span class="hljs-string">"Failed parsing JSON source to Json"</span>, e);
+      }
+    }
+  }
+</div></code></pre>
+<p>After re-running <code>infer run -- mvn compile</code>, the issue disappears from the output for this specific location, as the write is now protected (see <code>infer-validation/report.txt</code>).</p>
+<ul>
+<li><strong>Report</strong>: The fix eliminates the reported issue, but this may not be the intended behavior since Gson is not thread-safe overall. Note: both #0 and #1 from <code>infer-out/report.txt</code> dissappeared as they were pointing to the same issue.</li>
+</ul>
+<h2 id="issue-b-thread-safety-violation-in-defaultdatetypeadapter">Issue B: Thread Safety Violation in DefaultDateTypeAdapter</h2>
+<h3 id="issue-type-and-name">Issue Type and Name</h3>
+<ul>
+<li><strong>Type</strong>: Thread Safety Violation</li>
+<li><strong>Name</strong>: Read/Write race. Non-private method <code>DefaultDateTypeAdapter.write(...)</code> indirectly reads without synchronization from <code>out.deferredName</code>, which races with the write in method <code>DefaultDateTypeAdapter.write(...)</code>.</li>
+</ul>
+<h3 id="file-and-method-name">File and Method Name</h3>
+<ul>
+<li><strong>File</strong>: <code>src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java</code></li>
+<li><strong>Method</strong>: <code>write(JsonWriter out, Date value)</code></li>
+</ul>
+<h3 id="relevant-code-snippet">Relevant Code Snippet</h3>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(JsonWriter out, Date value)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+    <span class="hljs-keyword">if</span> (value == <span class="hljs-keyword">null</span>) {
+        out.nullValue();  <span class="hljs-comment">// Line 142: Indirect read/write to out.deferredName</span>
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-comment">// ... rest of method ...</span>
+    out.value(dateFormatAsString);  <span class="hljs-comment">// Line 152: Another access</span>
+}
+</div></code></pre>
+<h3 id="excerpt-of-the-infer-trace">Excerpt of the Infer Trace</h3>
+<pre class="hljs"><code><div>src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:142: warning: Thread Safety Violation
+  Read/Write race. Non-private method `DefaultDateTypeAdapter.write(...)` indirectly reads without synchronization from `out.deferredName`, which races with the write in method `DefaultDateTypeAdapter.write(...)`.
+ Reporting because this access may occur on a background thread. 
+  140.     public void write(JsonWriter out, Date value) throws IOException {
+  141.       if (value == null) {
+  142. &gt;       out.nullValue();
+  143.         return;
+  144.       }
+</div></code></pre>
+<h3 id="execution-path-evidence-table">Execution Path Evidence Table</h3>
+<table>
+<thead>
+<tr>
+<th>Trace Step</th>
+<th>File</th>
+<th>Line</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value introduced</td>
+<td><code>src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java</code></td>
+<td>140</td>
+<td>The <code>out</code> parameter (JsonWriter) is introduced, containing the <code>deferredName</code> field.</td>
+</tr>
+<tr>
+<td>Conditional branch</td>
+<td><code>src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java</code></td>
+<td>141</td>
+<td>The <code>if (value == null)</code> branch leads to the risky <em>simulatenous</em> access.</td>
+</tr>
+<tr>
+<td>Risky state appears</td>
+<td><code>src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java</code></td>
+<td>142</td>
+<td>The call to <code>out.nullValue()</code> accesses <code>out.deferredName</code> without synchronization.</td>
+</tr>
+<tr>
+<td>Failure location</td>
+<td><code>src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java</code></td>
+<td>142</td>
+<td>The race occurs here due to unsynchronized read/write on <code>deferredName</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trace-understanding-questions">Trace Understanding Questions</h3>
+<h4 id="t1-first-feasible-failure-point">T1. First Feasible Failure Point</h4>
+<ul>
+<li><strong>File and line number</strong>: <code>src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java</code>, line 142 (<code>out.nullValue();</code>)</li>
+<li><strong>Explanation</strong>: This is the earliest point where the race becomes possible. The <code>out.nullValue()</code> method accesses <code>out.deferredName</code>, and since <code>write()</code> is not synchronized, concurrent calls to <code>write()</code> on the same <code>JsonWriter</code> could race on <code>deferredName</code>.</li>
+</ul>
+<h4 id="t2-infer-assumption">T2. Infer Assumption</h4>
+<ul>
+<li><strong>Assumption</strong>: Infer assumes that the <code>DefaultDateTypeAdapter.write()</code> method can be called concurrently on the same <code>JsonWriter</code> instance, leading to races on <code>out.deferredName</code>. This contradicts the author's instructions previously mentioned in Issue A's classification.</li>
+<li><strong>Explanation and code location</strong>: This is based on the <code>out</code> parameter (line 140) being a mutable object passed in, and the lack of synchronization in the method. Infer models scenarios where multiple threads serialize dates using the same writer. However, authors have noted that instances of <code>JsonWriter</code> may be used to write to a single JSON stream and are NOT thread-safe.</li>
+</ul>
+<h4 id="t3-refactoring-robustness">T3. Refactoring Robustness</h4>
+<ul>
+<li><strong>Semgrep</strong>: Semgrep would likely still detect the issue if its rules target method calls like <code>out.nullValue()</code> without synchronization. Again, if semgrep is customized with the appropriate semantic rules to handle concurrency detection in great depth, then it could detect the concurrency issue, since this issue is quite trivial. However, semgrep has its limitations in detecting the more complex, cross-function, or cross-file timing and ordering issues like generic race conditions or infinite loops.</li>
+<li><strong>Infer</strong>: Infer would still report the issue, as the data flow and lack of synchronization remain the same. Path-sensitive analysis focuses on the actual concurrency problem, not variable names.</li>
+<li><strong>Reasoning</strong>: Semgrep's pattern matching is more brittle to code changes, while Infer's deeper analysis makes it resilient to refactoring that doesn't address the root cause.</li>
+</ul>
+<h3 id="classification">Classification</h3>
+<ul>
+<li><strong>Classification</strong>: Likely false positive</li>
+<li><strong>Justification</strong>: Similar to Issue A, Gson type adapters are not designed for concurrent use. The <code>JsonWriter</code> is typically used in a single-threaded context, and synchronizing every adapter method would be impractical. The race is theoretical and not a real defect in intended usage.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>Both issues are classified as likely false positives due to Gson's non-thread-safe design. The analysis highlights Infer's strength in detecting potential concurrency issues, even if they are not practical defects. No fixes were applied beyond demonstration for Issue A, as the issues do not represent real bugs in the codebase.</p>
+
+</body>
+</html>
