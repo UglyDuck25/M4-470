@@ -34,7 +34,10 @@ RUN INFER_VERSION=v1.2.0; \
 ENV PATH=/infer/bin:${PATH}
 
 # 2. Clone Gson repository
-RUN git clone https://github.com/google/gson.git
+COPY . .
+
+# initialize submodules inside container
+RUN git submodule update --init --recursive
 WORKDIR /m4/gson
 
 # 3. Record commit/tag information
