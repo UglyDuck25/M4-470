@@ -14,6 +14,7 @@ Everything is automated, dependencies, Infer, and Gson are all set up inside the
 docker build -t infer-gson .
 ```
 This will take a few minutes the first time.
+Added  platform flag for Macbook
 
 ### 2. Run the container
 ```
