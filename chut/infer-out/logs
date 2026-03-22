@@ -1,0 +1,536 @@
+[96][      debug] Sqlite write daemon: starting up
+[96][      debug] Sqlite write daemon: set up complete, waiting for connections
+[97][      debug] Sqlite write daemon: process starting, pid= 97
+[96][environment] CWD = /m4/gson/gson
+[96][environment] No .inferconfig file found
+[96][environment] Project root = /m4/gson/gson
+[96][environment] INFER_ARGS =   @/tmp/args.tmp.508f09 --progress-bar-style multiline
+[96][environment] command line arguments:   infer run -- javac -cp
+[96][environment]                           /root/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/root/.m2/repository/com/google/guava/guava/32.1.0-jre/guava-32.1.0-jre.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.47.0/error_prone_annotations-2.47.0.jar:/root/.m2/repository/com/diffplug/spotless/spotless-maven-plugin/3.2.1/spotless-maven-plugin-3.2.1.jar:/root/.m2/repository/com/github/package-url/packageurl-java/1.4.1/packageurl-java-1.4.1.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.16.1/jackson-core-2.16.1.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.16.1/jackson-annotations-2.16.1.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.16.1/jackson-databind-2.16.1.jar:/root/.m2/repository/com/thoughtworks/qdox/qdox/2.2.0/qdox-2.2.0.jar:/root/.m2/repository/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar:/root/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/root/.m2/repository/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:/root/.m2/repository/commons-io/commons-io/2.16.1/commons-io-2.16.1.jar:/root/.m2/repository/biz/aQute/bnd/bnd-maven-plugin/6.4.0/bnd-maven-plugin-6.4.0.jar:/root/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/root/.m2/repository/org/sonatype/central/central-publishing-maven-plugin/0.10.0/central-publishing-maven-plugin-0.10.0.jar:/root/.m2/repository/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar:/root/.m2/repository/org/codehaus/plexus/plexus-xml/3.0.1/plexus-xml-3.0.1.jar:/root/.m2/repository/org/codehaus/plexus/plexus-compiler-javac/2.16.2/plexus-compiler-javac-2.16.2.jar:/root/.m2/repository/org/codehaus/plexus/plexus-compiler-api/2.16.2/plexus-compiler-api-2.16.2.jar:/root/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.29/plexus-interpolation-1.29.jar:/root/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.27/plexus-interpolation-1.27.jar:/root/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.1/plexus-utils-4.0.1.jar:/root/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar:/root/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.2/plexus-utils-4.0.2.jar:/root/.m2/repository/org/codehaus/plexus/plexus-java/1.5.2/plexus-java-1.5.2.jar:/root/.m2/repository/org/codehaus/plexus/plexus-compiler-manager/2.16.2/plexus-compiler-manager-2.16.2.jar:/root/.m2/repository/org/codehaus/mojo/templating-maven-plugin/3.1.0/templating-maven-plugin-3.1.0.jar:/root/.m2/repository/org/ow2/asm/asm/9.9.1/asm-9.9.1.jar:/root/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/root/.m2/repository/org/apache/maven/resolver/maven-resolver-util/1.9.23/maven-resolver-util-1.9.23.jar:/root/.m2/repository/org/apache/maven/plugins/maven-compiler-plugin/3.15.0/maven-compiler-plugin-3.15.0.jar:/root/.m2/repository/org/apache/maven/plugins/maven-enforcer-plugin/3.6.2/maven-enforcer-plugin-3.6.2.jar:/root/.m2/repository/org/apache/maven/plugins/maven-resources-plugin/3.4.0/maven-resources-plugin-3.4.0.jar:/root/.m2/repository/org/apache/maven/plugins/maven-artifact-plugin/3.6.1/maven-artifact-plugin-3.6.1.jar:/root/.m2/repository/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.jar:/root/.m2/repository/org/apache/maven/plugins/maven-failsafe-plugin/3.5.4/maven-failsafe-plugin-3.5.4.jar:/root/.m2/repository/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar:/root/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar:/root/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar:/root/.m2/repository/org/apache/maven/shared/maven-filtering/3.4.0/maven-filtering-3.4.0.jar:/root/.m2/repository/org/apache/maven/enforcer/enforcer-rules/3.6.2/enforcer-rules-3.6.2.jar:/root/.m2/repository/org/apache/maven/enforcer/enforcer-api/3.6.2/enforcer-api-3.6.2.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.19.0/commons-lang3-3.19.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.16.0/commons-lang3-3.16.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2.4/httpcore5-h2-5.2.4.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2.4/httpcore5-5.2.4.jar:/root/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.3.1/httpclient5-5.3.1.jar:
+[96][environment]                           -source 11 -target 11
+[96][environment]                           src/main/java/com/google/gson/InstanceCreator.java
+[96][environment]                           src/main/java/com/google/gson/JsonElement.java
+[96][environment]                           src/main/java/com/google/gson/FieldNamingStrategy.java
+[96][environment]                           src/main/java/com/google/gson/JsonParseException.java
+[96][environment]                           src/main/java/com/google/gson/TypeAdapter.java
+[96][environment]                           src/main/java/com/google/gson/JsonSyntaxException.java
+[96][environment]                           src/main/java/com/google/gson/JsonStreamParser.java
+[96][environment]                           src/main/java/com/google/gson/annotations/Since.java
+[96][environment]                           src/main/java/com/google/gson/annotations/SerializedName.java
+[96][environment]                           src/main/java/com/google/gson/annotations/Until.java
+[96][environment]                           src/main/java/com/google/gson/annotations/JsonAdapter.java
+[96][environment]                           src/main/java/com/google/gson/annotations/package-info.java
+[96][environment]                           src/main/java/com/google/gson/annotations/Expose.java
+[96][environment]                           src/main/java/com/google/gson/JsonSerializer.java
+[96][environment]                           src/main/java/com/google/gson/JsonIOException.java
+[96][environment]                           src/main/java/com/google/gson/JsonParser.java
+[96][environment]                           src/main/java/com/google/gson/internal/sql/SqlTimestampTypeAdapter.java
+[96][environment]                           src/main/java/com/google/gson/internal/sql/SqlDateTypeAdapter.java
+[96][environment]                           src/main/java/com/google/gson/internal/sql/SqlTypesSupport.java
+[96][environment]                           src/main/java/com/google/gson/internal/sql/SqlTimeTypeAdapter.java
+[96][environment]                           src/main/java/com/google/gson/internal/NumberLimits.java
+[96][environment]                           src/main/java/com/google/gson/internal/UnsafeAllocator.java
+[96][environment]                           src/main/java/com/google/gson/internal/GsonTypes.java
+[96][environment]                           src/main/java/com/google/gson/internal/ReflectionAccessFilterHelper.java
+[96][environment]                           src/main/java/com/google/gson/internal/Streams.java
+[96][environment]                           src/main/java/com/google/gson/internal/ObjectConstructor.java
+[96][environment]                           src/main/java/com/google/gson/internal/LinkedTreeMap.java
+[96][environment]                           src/main/java/com/google/gson/internal/PreJava9DateFormatProvider.java
+[96][environment]                           src/main/java/com/google/gson/internal/TroubleshootingGuide.java
+[96][environment]                           src/main/java/com/google/gson/internal/reflect/ReflectionHelper.java
+[96][environment]                           src/main/java/com/google/gson/internal/NonNullElementWrapperList.java
+[96][environment]                           src/main/java/com/google/gson/internal/Primitives.java
+[96][environment]                           src/main/java/com/google/gson/internal/ConstructorConstructor.java
+[96][environment]                           src/main/java/com/google/gson/internal/package-info.java
+[96][environment]                           src/main/java/com/google/gson/internal/LazilyParsedNumber.java
+[96][environment]                           src/main/java/com/google/gson/internal/JsonReaderInternalAccess.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/ObjectTypeAdapter.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/SerializationDelegatingTypeAdapter.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/TypeAdapters.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/JsonElementTypeAdapter.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/NumberTypeAdapter.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/JsonTreeReader.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java
+[96][environment]                           src/main/java/com/google/gson/internal/bind/IgnoreJRERequirement.java
+[96][environment]                           src/main/java/com/google/gson/internal/Excluder.java
+[96][environment]                           src/main/java/com/google/gson/internal/JavaVersion.java
+[96][environment]                           src/main/java/com/google/gson/ReflectionAccessFilter.java
+[96][environment]                           src/main/java/com/google/gson/ToNumberStrategy.java
+[96][environment]                           src/main/java/com/google/gson/JsonSerializationContext.java
+[96][environment]                           src/main/java/com/google/gson/reflect/TypeToken.java
+[96][environment]                           src/main/java/com/google/gson/reflect/package-info.java
+[96][environment]                           src/main/java/com/google/gson/JsonDeserializer.java
+[96][environment]                           src/main/java/com/google/gson/ExclusionStrategy.java
+[96][environment]                           src/main/java/com/google/gson/TypeAdapterFactory.java
+[96][environment]                           src/main/java/com/google/gson/JsonObject.java
+[96][environment]                           src/main/java/com/google/gson/package-info.java
+[96][environment]                           src/main/java/com/google/gson/ToNumberPolicy.java
+[96][environment]                           src/main/java/com/google/gson/JsonPrimitive.java
+[96][environment]                           src/main/java/com/google/gson/FormattingStyle.java
+[96][environment]                           src/main/java/com/google/gson/FieldAttributes.java
+[96][environment]                           src/main/java/com/google/gson/GsonBuilder.java
+[96][environment]                           src/main/java/com/google/gson/FieldNamingPolicy.java
+[96][environment]                           src/main/java/com/google/gson/stream/JsonReader.java
+[96][environment]                           src/main/java/com/google/gson/stream/JsonWriter.java
+[96][environment]                           src/main/java/com/google/gson/stream/MalformedJsonException.java
+[96][environment]                           src/main/java/com/google/gson/stream/JsonToken.java
+[96][environment]                           src/main/java/com/google/gson/stream/JsonScope.java
+[96][environment]                           src/main/java/com/google/gson/stream/package-info.java
+[96][environment]                           src/main/java/com/google/gson/LongSerializationPolicy.java
+[96][environment]                           src/main/java/com/google/gson/JsonDeserializationContext.java
+[96][environment]                           src/main/java/com/google/gson/Strictness.java
+[96][environment]                           src/main/java/com/google/gson/JsonNull.java
+[96][environment]                           src/main/java/com/google/gson/Gson.java
+[96][environment]                           src/main/java/com/google/gson/JsonArray.java
+[96][environment]                           target/generated-sources/java-templates/com/google/gson/internal/GsonBuildConfig.java
+[96][environment] Available memory at startup: 22871 MB
+[96][environment] Active checkers: self-in-block (C/C++/ObjC), parameter-not-null-checked (C/C++/ObjC), starvation (C/C++/ObjC, Java), siof (C/C++/ObjC), racerd (C/C++/ObjC, C#/.Net, Java), pulse (C/C++/ObjC, C#/.Net, Erlang, Hack, Java, Python), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java)
+[96][environment] Scheduler: restart
+[96][environment] Cores used: 10
+[96][environment] Infer version v1.2.0
+[96][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[96][environment] 
+[96][   progress] Capturing in javac mode...
+[96][      debug] Current working directory: '/m4/gson/gson'
+[96][      debug] Trying to execute: javac '-J-Duser.language=en' '@/m4/gson/gson/infer-out/tmp/javac_args.tmp.da75db' 2>'/m4/gson/gson/infer-out/tmp/javac.tmp.440780.out'
+[96][      debug] *** Success. Logs:
+[96][      debug] Translating 82 source files (215 classes)
+[96][      debug] Global tenv size global_tenv_size_mb: 0
+[96][      debug] done capturing all files
+[96][      debug] GC stats for capture:
+[96][      debug]   minor_words: 6.24527e+07
+[96][      debug]   promoted_words: 4.17024e+06
+[96][      debug]   major_words: 4.89506e+06
+[96][      debug]   minor_collections: 103
+[96][      debug]   major_collections: 14
+[96][      debug]   compactions: 0
+[96][      debug]   top_heap_words: 3082752
+[96][      debug]   
+[96][environment] Parallel jobs: 10
+[96][   progress] Found 86 source files to analyze in /m4/gson/gson/infer-out
+[133][   progress] Analysing block of 200 procs, starting with TypeAdapter TreeTypeAdapter.getSerializationDelegate()
+[132][   progress] Analysing block of 200 procs, starting with JsonElement LongSerializationPolicy$2.serialize(Long)
+[131][   progress] Analysing block of 200 procs, starting with Object JavaTimeTypeAdapters$13.read(JsonReader)
+[140][   progress] Analysing block of 200 procs, starting with Iterator LinkedTreeMap$EntrySet.iterator()
+[137][   progress] Analysing block of 200 procs, starting with boolean TypeToken.equals(Object)
+[136][   progress] Analysing block of 200 procs, starting with int JsonArray.size()
+[138][   progress] Analysing block of 200 procs, starting with int JavaVersion.parseDotted(String)
+[134][   progress] Analysing block of 200 procs, starting with boolean NonNullElementWrapperList.retainAll(Collection)
+[135][   progress] Analysing block of 200 procs, starting with TypeAdapter SqlDateTypeAdapter$1.create(Gson,TypeToken)
+[139][   progress] Analysing block of 200 procs, starting with TypeAdapter TypeAdapter.nullSafe()
+[137][   progress] src/main/java/com/google/gson/internal/sql/SqlTypesSupport.java starting
+[137][   progress] src/main/java/com/google/gson/internal/sql/SqlTypesSupport.java DONE
+[137][   progress] src/main/java/com/google/gson/FieldAttributes.java starting
+[137][   progress] src/main/java/com/google/gson/FieldAttributes.java DONE
+[137][   progress] src/main/java/com/google/gson/annotations/JsonAdapter.java starting
+[137][   progress] src/main/java/com/google/gson/annotations/JsonAdapter.java DONE
+[137][   progress] src/main/java/com/google/gson/stream/JsonToken.java starting
+[137][   progress] src/main/java/com/google/gson/stream/JsonToken.java DONE
+[137][   progress] src/main/java/com/google/gson/InstanceCreator.java starting
+[137][   progress] src/main/java/com/google/gson/InstanceCreator.java DONE
+[137][   progress] src/main/java/com/google/gson/internal/TroubleshootingGuide.java starting
+[137][   progress] src/main/java/com/google/gson/internal/TroubleshootingGuide.java DONE
+[137][   progress] src/main/java/com/google/gson/GsonBuilder.java starting
+[137][   progress] src/main/java/com/google/gson/GsonBuilder.java DONE
+[137][   progress] src/main/java/com/google/gson/reflect/package-info.java starting
+[137][   progress] src/main/java/com/google/gson/reflect/package-info.java DONE
+[137][   progress] src/main/java/com/google/gson/internal/package-info.java starting
+[137][   progress] src/main/java/com/google/gson/internal/package-info.java DONE
+[137][   progress] src/main/java/com/google/gson/JsonPrimitive.java starting
+[137][   progress] src/main/java/com/google/gson/JsonPrimitive.java DONE
+[137][   progress] src/main/java/com/google/gson/annotations/Until.java starting
+[137][   progress] src/main/java/com/google/gson/annotations/Until.java DONE
+[137][   progress] src/main/java/com/google/gson/TypeAdapter.java starting
+[137][   progress] src/main/java/com/google/gson/TypeAdapter.java DONE
+[137][   progress] src/main/java/com/google/gson/internal/LinkedTreeMap.java starting
+[139][   progress] src/main/java/com/google/gson/internal/bind/JsonTreeReader.java starting
+[140][   progress] src/main/java/com/google/gson/internal/PreJava9DateFormatProvider.java starting
+[140][   progress] src/main/java/com/google/gson/internal/PreJava9DateFormatProvider.java DONE
+[140][   progress] src/main/java/com/google/gson/stream/package-info.java starting
+[140][   progress] src/main/java/com/google/gson/stream/package-info.java DONE
+[140][   progress] src/main/java/com/google/gson/FieldNamingStrategy.java starting
+[140][   progress] src/main/java/com/google/gson/FieldNamingStrategy.java DONE
+[140][   progress] src/main/java/com/google/gson/internal/bind/JsonElementTypeAdapter.java starting
+[139][   progress] src/main/java/com/google/gson/internal/bind/JsonTreeReader.java DONE
+[139][   progress] src/main/java/com/google/gson/internal/bind/SerializationDelegatingTypeAdapter.java starting
+[139][   progress] src/main/java/com/google/gson/internal/bind/SerializationDelegatingTypeAdapter.java DONE
+[139][   progress] src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java starting
+[137][   progress] src/main/java/com/google/gson/internal/LinkedTreeMap.java DONE
+[137][   progress] src/main/java/com/google/gson/Strictness.java starting
+[137][   progress] src/main/java/com/google/gson/Strictness.java DONE
+[137][   progress] src/main/java/com/google/gson/JsonIOException.java starting
+[137][   progress] src/main/java/com/google/gson/JsonIOException.java DONE
+[137][   progress] src/main/java/com/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper.java starting
+[132][   progress] src/main/java/com/google/gson/internal/NumberLimits.java starting
+[135][   progress] src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java starting
+[137][   progress] src/main/java/com/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper.java DONE
+[135][   progress] src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java DONE
+[137][   progress] target/generated-sources/java-templates/com/google/gson/internal/GsonBuildConfig.java starting
+[135][   progress] src/main/java/com/google/gson/annotations/Expose.java starting
+[137][   progress] target/generated-sources/java-templates/com/google/gson/internal/GsonBuildConfig.java DONE
+[137][   progress] src/main/java/com/google/gson/internal/Excluder.java starting
+[132][   progress] src/main/java/com/google/gson/internal/NumberLimits.java DONE
+[135][   progress] src/main/java/com/google/gson/annotations/Expose.java DONE
+[135][   progress] src/main/java/com/google/gson/Gson.java starting
+[132][   progress] src/main/java/com/google/gson/internal/bind/IgnoreJRERequirement.java starting
+[132][   progress] src/main/java/com/google/gson/internal/bind/IgnoreJRERequirement.java DONE
+[132][   progress] src/main/java/com/google/gson/package-info.java starting
+[132][   progress] src/main/java/com/google/gson/package-info.java DONE
+[132][   progress] src/main/java/com/google/gson/internal/JavaVersion.java starting
+[132][   progress] src/main/java/com/google/gson/internal/JavaVersion.java DONE
+[132][   progress] src/main/java/com/google/gson/JsonObject.java starting
+[138][   progress] src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java starting
+[134][   progress] src/main/java/com/google/gson/JsonParser.java starting
+[138][   progress] src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java DONE
+[138][   progress] src/main/java/com/google/gson/JsonArray.java starting
+[140][   progress] src/main/java/com/google/gson/internal/bind/JsonElementTypeAdapter.java DONE
+[140][   progress] src/main/java/com/google/gson/LongSerializationPolicy.java starting
+[140][   progress] src/main/java/com/google/gson/LongSerializationPolicy.java DONE
+[140][   progress] src/main/java/com/google/gson/ToNumberPolicy.java starting
+[138][   progress] src/main/java/com/google/gson/JsonArray.java DONE
+[138][   progress] src/main/java/com/google/gson/internal/bind/ObjectTypeAdapter.java starting
+[138][   progress] src/main/java/com/google/gson/internal/bind/ObjectTypeAdapter.java DONE
+[138][   progress] src/main/java/com/google/gson/internal/ObjectConstructor.java starting
+[138][   progress] src/main/java/com/google/gson/internal/ObjectConstructor.java DONE
+[138][   progress] src/main/java/com/google/gson/internal/GsonTypes.java starting
+[138][   progress] src/main/java/com/google/gson/internal/GsonTypes.java DONE
+[138][   progress] src/main/java/com/google/gson/annotations/package-info.java starting
+[138][   progress] src/main/java/com/google/gson/annotations/package-info.java DONE
+[138][   progress] src/main/java/com/google/gson/internal/ConstructorConstructor.java starting
+[137][   progress] src/main/java/com/google/gson/internal/Excluder.java DONE
+[137][   progress] src/main/java/com/google/gson/JsonNull.java starting
+[137][   progress] src/main/java/com/google/gson/JsonNull.java DONE
+[137][   progress] src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java starting
+[134][   progress] src/main/java/com/google/gson/JsonParser.java DONE
+[134][   progress] src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java starting
+[138][   progress] src/main/java/com/google/gson/internal/ConstructorConstructor.java DONE
+[138][   progress] src/main/java/com/google/gson/stream/JsonWriter.java starting
+[132][   progress] src/main/java/com/google/gson/JsonObject.java DONE
+[132][   progress] src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java starting
+[139][   progress] src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java DONE
+[139][   progress] src/main/java/com/google/gson/FormattingStyle.java starting
+[139][   progress] src/main/java/com/google/gson/FormattingStyle.java DONE
+[139][   progress] src/main/java/com/google/gson/internal/ReflectionAccessFilterHelper.java starting
+[139][   progress] src/main/java/com/google/gson/internal/ReflectionAccessFilterHelper.java DONE
+[139][   progress] src/main/java/com/google/gson/JsonParseException.java starting
+[139][   progress] src/main/java/com/google/gson/JsonParseException.java DONE
+[139][   progress] src/main/java/com/google/gson/internal/Streams.java starting
+[139][   progress] src/main/java/com/google/gson/internal/Streams.java DONE
+[139][   progress] src/main/java/com/google/gson/JsonSyntaxException.java starting
+[139][   progress] src/main/java/com/google/gson/JsonSyntaxException.java DONE
+[139][   progress] src/main/java/com/google/gson/JsonDeserializationContext.java starting
+[139][   progress] src/main/java/com/google/gson/JsonDeserializationContext.java DONE
+[139][   progress] src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java starting
+[134][   progress] src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java DONE
+[134][   progress] src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java starting
+[140][   progress] src/main/java/com/google/gson/ToNumberPolicy.java DONE
+[140][   progress] src/main/java/com/google/gson/internal/bind/NumberTypeAdapter.java starting
+[140][   progress] src/main/java/com/google/gson/internal/bind/NumberTypeAdapter.java DONE
+[140][   progress] src/main/java/com/google/gson/internal/JsonReaderInternalAccess.java starting
+[140][   progress] src/main/java/com/google/gson/internal/JsonReaderInternalAccess.java DONE
+[140][   progress] src/main/java/com/google/gson/internal/sql/SqlDateTypeAdapter.java starting
+[132][   progress] src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java DONE
+[132][   progress] src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java starting
+[132][   progress] src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java DONE
+[132][   progress] src/main/java/com/google/gson/JsonSerializer.java starting
+[132][   progress] src/main/java/com/google/gson/JsonSerializer.java DONE
+[132][   progress] src/main/java/com/google/gson/JsonStreamParser.java starting
+[132][   progress] src/main/java/com/google/gson/JsonStreamParser.java DONE
+[132][   progress] src/main/java/com/google/gson/reflect/TypeToken.java starting
+[134][   progress] src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java DONE
+[134][   progress] src/main/java/com/google/gson/ToNumberStrategy.java starting
+[134][   progress] src/main/java/com/google/gson/ToNumberStrategy.java DONE
+[134][   progress] src/main/java/com/google/gson/ExclusionStrategy.java starting
+[134][   progress] src/main/java/com/google/gson/ExclusionStrategy.java DONE
+[134][   progress] src/main/java/com/google/gson/internal/reflect/ReflectionHelper.java starting
+[134][   progress] src/main/java/com/google/gson/internal/reflect/ReflectionHelper.java DONE
+[134][   progress] src/main/java/com/google/gson/annotations/SerializedName.java starting
+[134][   progress] src/main/java/com/google/gson/annotations/SerializedName.java DONE
+[134][   progress] src/main/java/com/google/gson/internal/LazilyParsedNumber.java starting
+[134][   progress] src/main/java/com/google/gson/internal/LazilyParsedNumber.java DONE
+[134][   progress] src/main/java/com/google/gson/internal/Primitives.java starting
+[134][   progress] src/main/java/com/google/gson/internal/Primitives.java DONE
+[134][   progress] src/main/java/com/google/gson/JsonSerializationContext.java starting
+[134][   progress] src/main/java/com/google/gson/JsonSerializationContext.java DONE
+[134][   progress] src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java starting
+[134][   progress] src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java DONE
+[134][   progress] src/main/java/com/google/gson/ReflectionAccessFilter.java starting
+[134][   progress] src/main/java/com/google/gson/ReflectionAccessFilter.java DONE
+[134][   progress] src/main/java/com/google/gson/internal/NonNullElementWrapperList.java starting
+[134][   progress] src/main/java/com/google/gson/internal/NonNullElementWrapperList.java DONE
+[134][   progress] src/main/java/com/google/gson/internal/sql/SqlTimeTypeAdapter.java starting
+[133][   progress] src/main/java/com/google/gson/annotations/Since.java starting
+[133][   progress] src/main/java/com/google/gson/annotations/Since.java DONE
+[133][   progress] src/main/java/com/google/gson/stream/JsonScope.java starting
+[133][   progress] src/main/java/com/google/gson/stream/JsonScope.java DONE
+[133][   progress] src/main/java/com/google/gson/internal/sql/SqlTimestampTypeAdapter.java starting
+[133][   progress] src/main/java/com/google/gson/internal/sql/SqlTimestampTypeAdapter.java DONE
+[133][   progress] src/main/java/com/google/gson/stream/MalformedJsonException.java starting
+[132][   progress] src/main/java/com/google/gson/reflect/TypeToken.java DONE
+[133][   progress] src/main/java/com/google/gson/stream/MalformedJsonException.java DONE
+[132][   progress] src/main/java/com/google/gson/JsonElement.java starting
+[133][   progress] src/main/java/com/google/gson/internal/bind/TypeAdapters.java starting
+[134][   progress] src/main/java/com/google/gson/internal/sql/SqlTimeTypeAdapter.java DONE
+[134][   progress] src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java starting
+[134][   progress] src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java DONE
+[134][   progress] src/main/java/com/google/gson/TypeAdapterFactory.java starting
+[134][   progress] src/main/java/com/google/gson/TypeAdapterFactory.java DONE
+[134][   progress] src/main/java/com/google/gson/stream/JsonReader.java starting
+[132][   progress] src/main/java/com/google/gson/JsonElement.java DONE
+[132][   progress] src/main/java/com/google/gson/FieldNamingPolicy.java starting
+[132][   progress] src/main/java/com/google/gson/FieldNamingPolicy.java DONE
+[132][   progress] src/main/java/com/google/gson/JsonDeserializer.java starting
+[132][   progress] src/main/java/com/google/gson/JsonDeserializer.java DONE
+[132][   progress] src/main/java/com/google/gson/internal/UnsafeAllocator.java starting
+[138][   progress] src/main/java/com/google/gson/stream/JsonWriter.java DONE
+[140][   progress] src/main/java/com/google/gson/internal/sql/SqlDateTypeAdapter.java DONE
+[132][   progress] src/main/java/com/google/gson/internal/UnsafeAllocator.java DONE
+[134][   progress] src/main/java/com/google/gson/stream/JsonReader.java DONE
+[134][   progress] Analysing block of 200 procs, starting with Object Gson.fromJson(JsonElement,Type)
+[139][   progress] src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java DONE
+[134][   progress] src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java starting
+[134][   progress] src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java DONE
+[131][   progress] src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java starting
+[131][   progress] src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java DONE
+[135][   progress] src/main/java/com/google/gson/Gson.java DONE
+[133][   progress] src/main/java/com/google/gson/internal/bind/TypeAdapters.java DONE
+[137][   progress] src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java DONE
+[131][   progress] src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java starting
+[131][   progress] src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java DONE
+[133][   progress] src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java starting
+[133][   progress] src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java DONE
+[96][      debug] Backend stats:
+[96][      debug]   summary_file_try_load= 21822
+[96][      debug]   summary_read_from_disk= 2920
+[96][      debug]   summary_cache_hits= 13027 (37%)
+[96][      debug]   summary_cache_misses= 21822
+[96][      debug]   ondemand_procs_analyzed= 1301
+[96][      debug]   proc_locker_lock_time_user= 0.07202300
+[96][      debug]   proc_locker_lock_time_sys= 0.03415500
+[96][      debug]   proc_locker_lock_time_wall= 0.11222177
+[96][      debug]   proc_locker_lock_time_oncpu_pct= 95%
+[96][      debug]   proc_locker_unlock_time_user= 0.06181500
+[96][      debug]   proc_locker_unlock_time_sys= 0.01221700
+[96][      debug]   proc_locker_unlock_time_wall= 0.07780601
+[96][      debug]   proc_locker_unlock_time_oncpu_pct= 95%
+[96][      debug]   restart_scheduler_useful_time_user= 34.83334400
+[96][      debug]   restart_scheduler_useful_time_sys= 2.01318100
+[96][      debug]   restart_scheduler_useful_time_wall= 40.54798149
+[96][      debug]   restart_scheduler_useful_time_oncpu_pct= 91%
+[96][      debug]   restart_scheduler_total_time_user= 35.13240300
+[96][      debug]   restart_scheduler_total_time_sys= 2.10334500
+[96][      debug]   restart_scheduler_total_time_wall= 40.96345152
+[96][      debug]   restart_scheduler_total_time_oncpu_pct= 91%
+[96][      debug]   pulse_aliasing_contradictions= 0
+[96][      debug]   pulse_args_length_contradictions= 0
+[96][      debug]   pulse_captured_vars_length_contradictions= 0
+[96][      debug]   pulse_disjuncts_dropped= 23701
+[96][      debug]   pulse_interrupted_loops= 74
+[96][      debug]   pulse_summaries_contradictions= 6
+[96][      debug]   pulse_summaries_unsat_for_caller= 679
+[96][      debug]   pulse_summaries_unsat_for_caller_percent= 52
+[96][      debug]   pulse_summaries_with_some_unreachable_nodes= 207
+[96][      debug]   pulse_summaries_with_some_unreachable_nodes_percent= 15
+[96][      debug]   pulse_summaries_with_some_unreachable_returns= 99
+[96][      debug]   pulse_summaries_with_some_unreachable_returns_percent= 0.7%
+[96][      debug]   pulse_summaries_count= [0 -> 1, 1 -> 579, 2 -> 107, 3 -> 65, 4 -> 38, 5 -> 15, 6 -> 5, 7 -> 2, 8 -> 19, 9 -> 2, 10 -> 16, 11 -> 3, 12 -> 11, 13 -> 2, 14 -> 4, 15 -> 2, 16 -> 5, 17 -> 1, 18 -> 7, 19 -> 2, 20 -> 195, 21 -> 17, 22 -> 28, 23 -> 10, 24 -> 7, 25 -> 3, 26 -> 19, 27 -> 7, 28 -> 13, 29 -> 16, 30 -> 12, 31 -> 8, 32 -> 6, 33 -> 1, 34 -> 3, 36 -> 7, 37 -> 5, 38 -> 7, 39 -> 6, 40 -> 45]
+[96][      debug]   pulse_summaries_total_disjuncts= 12656
+[96][      debug]   pulse_summaries_count_0_continue_program= 62
+[96][      debug]   pulse_summaries_count_0_percent= 4
+[96][      debug]   topl_reachable_calls= 0
+[96][      debug]   timeouts= 0
+[96][      debug]   timings= timings for fragment-retains-view:
+[96][      debug]     p10: 0.000000s p20: 0.000001s p30: 0.000001s p40: 0.000001s
+[96][      debug]     p50: 0.000001s p60: 0.000001s p70: 0.000001s p80: 0.000002s
+[96][      debug]     p90: 0.000002s p95: 0.000002s p96: 0.000002s p97: 0.000002s
+[96][      debug]     p98: 0.000002s p99: 0.000003s p99.9: 0.000045s p99.99: 0.000049s 
+[96][      debug]   timings for inefficient-keyset-iterator:
+[96][      debug]     p10: 0.000009s p20: 0.000013s p30: 0.000015s p40: 0.000018s
+[96][      debug]     p50: 0.000019s p60: 0.000021s p70: 0.000023s p80: 0.000029s
+[96][      debug]     p90: 0.000046s p95: 0.000094s p96: 0.000115s p97: 0.000158s
+[96][      debug]     p98: 0.000209s p99: 0.000390s p99.9: 0.003285s p99.99: 0.011613s 
+[96][      debug]   timings for pulse:
+[96][      debug]     p10: 0.000739s p20: 0.001187s p30: 0.001813s p40: 0.002704s
+[96][      debug]     p50: 0.004903s p60: 0.009515s p70: 0.016324s p80: 0.027912s
+[96][      debug]     p90: 0.069959s p95: 0.107078s p96: 0.116637s p97: 0.141758s
+[96][      debug]     p98: 0.163478s p99: 0.278134s p99.9: 0.651231s p99.99: 0.733228s 
+[96][      debug]   timings for racerd:
+[96][      debug]     p10: 0.000000s p20: 0.000032s p30: 0.000080s p40: 0.000119s
+[96][      debug]     p50: 0.000163s p60: 0.000207s p70: 0.000275s p80: 0.000429s
+[96][      debug]     p90: 0.000900s p95: 0.001619s p96: 0.001922s p97: 0.002615s
+[96][      debug]     p98: 0.003375s p99: 0.004584s p99.9: 0.011517s p99.99: 0.013592s 
+[96][      debug]   timings for starvation:
+[96][      debug]     p10: 0.000001s p20: 0.000051s p30: 0.000103s p40: 0.000158s
+[96][      debug]     p50: 0.000216s p60: 0.000289s p70: 0.000373s p80: 0.000508s
+[96][      debug]     p90: 0.000883s p95: 0.001440s p96: 0.001721s p97: 0.002075s
+[96][      debug]     p98: 0.002632s p99: 0.003857s p99.9: 0.011935s p99.99: 0.013063s 
+[96][      debug]   timings for preanalysis:
+[96][      debug]     p10: 0.000148s p20: 0.000216s p30: 0.000302s p40: 0.000384s
+[96][      debug]     p50: 0.000489s p60: 0.000681s p70: 0.001316s p80: 0.002334s
+[96][      debug]     p90: 0.004443s p95: 0.007126s p96: 0.007550s p97: 0.008441s
+[96][      debug]     p98: 0.009613s p99: 0.013060s p99.9: 0.067942s p99.99: 0.070900s 
+[96][      debug]   
+[96][      debug]   longest_proc_duration_heap= [
+[96][      debug]   1846497us: src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java: ReflectiveTypeAdapterFactory$FieldsData ReflectiveTypeAdapterFactory.getBoundFields(Gson,TypeToken,Class,boolean,boolean)
+[96][      debug]   1559725us: src/main/java/com/google/gson/stream/JsonReader.java: int JsonReader.doPeek()
+[96][      debug]   1527678us: src/main/java/com/google/gson/GsonBuilder.java: Gson GsonBuilder.create()
+[96][      debug]   1425752us: src/main/java/com/google/gson/Gson.java: Gson.<init>(GsonBuilder)
+[96][      debug]   1193233us: src/main/java/com/google/gson/GsonBuilder.java: List GsonBuilder.createFactories(ConstructorConstructor,JsonAdapterAnnotationTypeAdapterFactory)
+[96][      debug]   862957us: src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java: Date DefaultDateTypeAdapter.read(JsonReader)
+[96][      debug]   832577us: src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java: Date ISO8601Utils.parse(String,ParsePosition)
+[96][      debug]   819087us: src/main/java/com/google/gson/stream/JsonReader.java: int JsonReader.nextNonWhitespace(boolean)
+[96][      debug]   790172us: src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java: Date DefaultDateTypeAdapter.deserializeToDate(JsonReader)
+[96][      debug]   711133us: src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java: TypeAdapter TreeTypeAdapter.delegate()
+[96][      debug]   ]
+[96][      debug]   process_times_user= 35.63437100
+[96][      debug]   process_times_sys= 2.24737000
+[96][      debug]   process_times_wall= 45.64489652
+[96][      debug]   process_times_oncpu_pct= 83%
+[96][      debug]   useful_times_user= 35.60827100
+[96][      debug]   useful_times_sys= 2.24175100
+[96][      debug]   useful_times_wall= 41.62615386
+[96][      debug]   useful_times_oncpu_pct= 91%
+[96][      debug]   spec_store_times_user= 1.33052700
+[96][      debug]   spec_store_times_sys= 0.05964700
+[96][      debug]   spec_store_times_wall= 3.97754658
+[96][      debug]   spec_store_times_oncpu_pct= 35%
+[96][      debug]   
+[96][      debug] GC stats for backend_stats.gc_stats_add.:
+[96][      debug]   minor_words: 5.42526e+09
+[96][      debug]   promoted_words: 1.21942e+08
+[96][      debug]   major_words: 1.91695e+08
+[96][      debug]   minor_collections: 5285
+[96][      debug]   major_collections: 223
+[96][      debug]   compactions: 0
+[96][      debug]   top_heap_words: 66000896
+[96][      debug]   
+[96][      debug] GC stats for backend_stats.gc_stats_max.:
+[96][      debug]   minor_words: 7.06816e+08
+[96][      debug]   promoted_words: 1.45811e+07
+[96][      debug]   major_words: 2.10645e+07
+[96][      debug]   minor_collections: 685
+[96][      debug]   major_collections: 24
+[96][      debug]   compactions: 0
+[96][      debug]   top_heap_words: 8202240
+[96][      debug]   
+[96][      debug] Average over 10 processes
+[96][      debug] GC stats for backend_stats.gc_stats_average.:
+[96][      debug]   minor_words: 5.42526e+08
+[96][      debug]   promoted_words: 1.21942e+07
+[96][      debug]   major_words: 1.91695e+07
+[96][      debug]   minor_collections: 528
+[96][      debug]   major_collections: 22
+[96][      debug]   compactions: 0
+[96][      debug]   top_heap_words: 6600089
+[96][      debug]   
+[96][      debug] Analysis phase finished in 4.6s
+[96][      debug] backend_stats.scheduler_process_analysis_time_user= 0.38797200
+[96][      debug] backend_stats.scheduler_process_analysis_time_sys= 0.31532700
+[96][      debug] backend_stats.scheduler_process_analysis_time_wall= 4.59853892
+[96][      debug] backend_stats.scheduler_process_analysis_time_oncpu_pct= 15%
+[96][      debug] GC stats for analysis_scheduler:
+[96][      debug]   minor_words: 1.40453e+07
+[96][      debug]   promoted_words: 476744
+[96][      debug]   major_words: 1.00902e+06
+[96][      debug]   minor_collections: 16
+[96][      debug]   major_collections: 4
+[96][      debug]   compactions: 1
+[96][      debug]   top_heap_words: 3545600
+[96][      debug]   
+[96][     result] 
+src/main/java/com/google/gson/JsonStreamParser.java:51: warning: Thread Safety Violation
+  Unprotected write. Non-private method `JsonStreamParser.next()` indirectly writes to field `this.parser.limit` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not. 
+  49.    * @since 1.4
+  50.    */
+  51. > public final class JsonStreamParser implements Iterator<JsonElement> {
+  52.     private final JsonReader parser;
+  53.     private final Object lock;
+
+src/main/java/com/google/gson/JsonStreamParser.java:89: warning: Thread Safety Violation
+  Unprotected write. Non-private method `JsonStreamParser.next()` indirectly writes to field `this.parser.limit` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not. 
+  87.   
+  88.       try {
+  89. >       return Streams.parse(parser);
+  90.       } catch (StackOverflowError | OutOfMemoryError e) {
+  91.         throw new JsonParseException("Failed parsing JSON source to Json", e);
+
+src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:142: warning: Thread Safety Violation
+  Read/Write race. Non-private method `DefaultDateTypeAdapter.write(...)` indirectly reads without synchronization from `out.deferredName`, which races with the write in method `DefaultDateTypeAdapter.write(...)`.
+ Reporting because this access may occur on a background thread. 
+  140.     public void write(JsonWriter out, Date value) throws IOException {
+  141.       if (value == null) {
+  142. >       out.nullValue();
+  143.         return;
+  144.       }
+
+src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:152: warning: Thread Safety Violation
+  Unprotected write. Non-private method `DefaultDateTypeAdapter.write(...)` indirectly writes to field `out.deferredName` outside of synchronization.
+ Reporting because this access may occur on a background thread. 
+  150.         dateFormatAsString = dateFormat.format(value);
+  151.       }
+  152. >     out.value(dateFormatAsString);
+  153.     }
+  154.   
+
+src/main/java/com/google/gson/internal/sql/SqlDateTypeAdapter.java:58: warning: Thread Safety Violation
+  Unprotected write. Non-private method `SqlDateTypeAdapter.read(...)` indirectly writes to field `in.limit` outside of synchronization.
+ Reporting because this access may occur on a background thread. 
+  56.     @Override
+  57.     public java.sql.Date read(JsonReader in) throws IOException {
+  58. >     if (in.peek() == JsonToken.NULL) {
+  59.         in.nextNull();
+  60.         return null;
+
+
+Found 14 issues (console output truncated to 5, see '/m4/gson/gson/infer-out/report.txt' for the full list)
+                        Issue Type(ISSUED_TYPE_ID): #
+  Thread Safety Violation(THREAD_SAFETY_VIOLATION): 14
+
+[96][      debug] GC stats for report:
+[96][      debug]   minor_words: 597095
+[96][      debug]   promoted_words: 3453
+[96][      debug]   major_words: 24505
+[96][      debug]   minor_collections: 1
+[96][      debug]   major_collections: 0
+[96][      debug]   compactions: 0
+[96][      debug]   top_heap_words: 3545600
+[96][      debug]   
+[96][      debug] GC stats for main_process_full:
+[96][      debug]   minor_words: 8.00759e+07
+[96][      debug]   promoted_words: 5.35936e+06
+[96][      debug]   major_words: 6.68356e+06
+[96][      debug]   minor_collections: 128
+[96][      debug]   major_collections: 19
+[96][      debug]   compactions: 1
+[96][      debug]   top_heap_words: 3545600
+[96][      debug]   
+[96][      debug] Sqlite write daemon: waiting for process 97 to finish
+[97][      debug] Detected 43 spec overwrites.
+[97][      debug] Sqlite write daemon: terminating
+[97][      debug] dbwriter.useful_time_user= 0.72919300
+[97][      debug] dbwriter.useful_time_sys= 0.20352800
+[97][      debug] dbwriter.useful_time_wall= 1.71299314
+[97][      debug] dbwriter.useful_time_oncpu_pct= 54%
+[97][      debug] dbwriter.store_sql_user= 0.16334000
+[97][      debug] dbwriter.store_sql_sys= 0.07040100
+[97][      debug] dbwriter.store_sql_wall= 0.23884913
+[97][      debug] dbwriter.store_sql_oncpu_pct= 98%
+[97][      debug] dbwriter.store_sql_pct= 25%
+[97][      debug] dbwriter.total_time_user= 0.81440500
+[97][      debug] dbwriter.total_time_sys= 0.23008400
+[97][      debug] dbwriter.total_time_wall= 10.60987713
+[97][      debug] dbwriter.total_time_oncpu_pct= 10%
+[97][      debug] [96][      debug] Sqlite write daemon: process 97 terminated
