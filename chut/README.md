@@ -1,10 +1,19 @@
-# Additional Infer Analysis — extras & proto modules
+# Chut — Experiment Outputs
 
-Assumes the core `gson` module is already built (`mvn clean compile -DskipTests` under `/m4/gson/gson`).
+All validations assume the core `gson` module is already built (`mvn clean compile -DskipTests` under `/m4/gson/gson`).
+Semgrep runs were executed after reproducibility validation of other team members' work.
 
 ---
 
-## extras module
+## Experiment 6.5: Comparison with Semgrep
+
+See [semgrep/6.5.md](semgrep/6.5.md) for full results, tool comparison table, and discussion.
+
+---
+
+## Experiment 6.2 & 6.3: Infer Validation (extras & proto modules)
+
+### extras module
 
 ```bash
 cd /m4/gson/extras
@@ -19,7 +28,7 @@ time infer run -- javac -cp "$CP" -source 11 -target 11 \
 
 ---
 
-## proto module
+### proto module
 
 ```bash
 cd /m4/gson/proto
