@@ -1,0 +1,18 @@
+=== global counters ===
+ondemand_procs_analyzed: 38
+pulse_aliasing_contradictions: 0
+pulse_args_length_contradictions: 0
+pulse_captured_vars_length_contradictions: 0
+pulse_disjuncts_dropped: 693
+pulse_interrupted_loops: 9
+pulse_summaries_contradictions: 1
+pulse_summaries_unsat_for_caller: 28
+pulse_summaries_with_some_unreachable_nodes: 7
+pulse_summaries_with_some_unreachable_returns: 0
+pulse_summaries_count_0_continue_program: 0
+pulse_summaries_count: { 1: 15, 2: 2, 3: 5, 4: 2, 11: 1, 12: 1, 13: 1, 15: 2, 20: 6, 40: 3 }
+=== percents per function and specialization ===
+percent of functions where a callee never returns: 73%
+percent of functions where at least one node got 0 disjuncts in its post: 18%
+percent of function where at least one return point got 0 disjuncts: 0%
+percent of function where 0 disjuncts were returned: 0%

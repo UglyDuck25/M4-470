@@ -1,0 +1,253 @@
+[334][      debug] Sqlite write daemon: starting up
+[334][      debug] Sqlite write daemon: set up complete, waiting for connections
+[335][      debug] Sqlite write daemon: process starting, pid= 335
+[334][environment] CWD = /m4/gson/extras
+[334][environment] No .inferconfig file found
+[334][environment] Project root = /m4/gson/extras
+[334][environment] INFER_ARGS =   @/tmp/args.tmp.936555 --progress-bar-style multiline
+[334][environment] command line arguments:   infer run -- javac -cp
+[334][environment]                           /m4/gson/gson/target/classes:/tmp/deps/javax.annotation-api-1.3.2.jar:/root/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/root/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/root/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/root/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/root/.m2/repository/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar:/root/.m2/repository/javax/enterprise/cdi-api/1.0/cdi-api-1.0.jar:/root/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/root/.m2/repository/com/google/guava/guava/32.1.0-jre/guava-32.1.0-jre.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.47.0/error_prone_annotations-2.47.0.jar:/root/.m2/repository/com/diffplug/spotless/spotless-maven-plugin/3.2.1/spotless-maven-plugin-3.2.1.jar:/root/.m2/repository/com/github/luben/zstd-jni/1.5.5-5/zstd-jni-1.5.5-5.jar:/root/.m2/repository/com/github/package-url/packageurl-java/1.4.1/packageurl-java-1.4.1.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.16.1/jackson-core-2.16.1.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.16.1/jackson-annotations-2.16.1.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.16.1/jackson-databind-2.16.1.jar:/root/.m2/repository/com/thoughtworks/qdox/qdox/2.2.0/qdox-2.2.0.jar:/root/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/root/.m2/repository/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar:/root/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/root/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/root/.m2/repository/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar:/root/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:/root/.m2/repository/commons-io/commons-io/2.16.1/commons-io-2.16.1.jar:/root/.m2/repository/commons-chain/commons-chain/1.1/commons-chain-1.1.jar:/root/.m2/repository/biz/aQute/bnd/bnd-maven-plugin/6.4.0/bnd-maven-plugin-6.4.0.jar:/root/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar:/root/.m2/repository/dom4j/dom4j/1.1/dom4j-1.1.jar:/root/.m2/repository/commons-digester/commons-digester/1.8/commons-digester-1.8.jar:/root/.m2/repository/org/tukaani/xz/1.9/xz-1.9.jar:/root/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/root/.m2/repository/org/sonatype/central/central-publishing-maven-plugin/0.10.0/central-publishing-maven-plugin-0.10.0.jar:/root/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar:/root/.m2/repository/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar:/root/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar:/root/.m2/repository/org/codehaus/plexus/plexus-xml/3.0.1/plexus-xml-3.0.1.jar:/root/.m2/repository/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.jar:/root/.m2/repository/org/codehaus/plexus/plexus-compiler-javac/2.16.2/plexus-compiler-javac-2.16.2.jar:/root/.m2/repository/org/codehaus/plexus/plexus-compiler-api/2.16.2/plexus-compiler-api-2.16.2.jar:/root/.m2/repository/org/codehaus/plexus/plexus-archiver/4.8.0/plexus-archiver-4.8.0.jar:/root/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.29/plexus-interpolation-1.29.jar:/root/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.16/plexus-interpolation-1.16.jar:/root/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.27/plexus-interpolation-1.27.jar:/root/.m2/repository/org/codehaus/plexus/plexus-io/3.4.1/plexus-io-3.4.1.jar:/root/.m2/repository/org/codehaus/plexus/plexus-i18n/1.0-beta-10/plexus-i18n-1.0-beta-10.jar:/root/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.1/plexus-utils-4.0.1.jar:/root/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar:/root/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.2/plexus-utils-4.0.2.jar:/root/.m2/repository/org/codehaus/plexus/plexus-java/1.5.2/plexus-java-1.5.2.jar:/root/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.4.2/plexus-classworlds-2.4.2.jar:/root/.m2/repository/org/codehaus/plexus/plexus-compiler-manager/2.16.2/plexus-compiler-manager-2.16.2.jar:/root/.m2/repository/org/codehaus/plexus/plexus-velocity/1.2/plexus-velocity-1.2.jar:/root/.m2/repository/org/codehaus/mojo/templating-maven-plugin/3.1.0/templating-maven-plugin-3.1.0.jar:/root/.m2/repository/org/ow2/asm/asm/9.5/asm-9.5.jar:/root/.m2/repository/org/ow2/asm/asm/9.9.1/asm-9.9.1.jar:/root/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.0.M1/org.eclipse.sisu.inject-0.3.0.M1.jar:/root/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.0.M1/org.eclipse.sisu.plexus-0.3.0.M1.jar:/root/.m2/repository/org/eclipse/aether/aether-api/0.9.0.M2/aether-api-0.9.0.M2.jar:/root/.m2/repository/org/eclipse/aether/aether-impl/0.9.0.M2/aether-impl-0.9.0.M2.jar:/root/.m2/repository/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.jar:/root/.m2/repository/org/eclipse/aether/aether-spi/0.9.0.M2/aether-spi-0.9.0.M2.jar:/root/.m2/repository/org/iq80/snappy/snappy/0.4/snappy-0.4.jar:/root/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/root/.m2/repository/org/apache/maven/resolver/maven-resolver-util/1.9.23/maven-resolver-util-1.9.23.jar:/root/.m2/repository/org/apache/maven/reporting/maven-reporting-api/3.1.1/maven-reporting-api-3.1.1.jar:/root/.m2/repository/org/apache/maven/reporting/maven-reporting-impl/3.2.0/maven-reporting-impl-3.2.0.jar:/root/.m2/repository/org/apache/maven/maven-aether-provider/3.1.0/maven-aether-provider-3.1.0.jar:/root/.m2/repository/org/apache/maven/plugins/maven-compiler-plugin/3.15.0/maven-compiler-plugin-3.15.0.jar:/root/.m2/repository/org/apache/maven/plugins/maven-install-plugin/3.1.4/maven-install-plugin-3.1.4.jar:/root/.m2/repository/org/apache/maven/plugins/maven-surefire-plugin/3.5.4/maven-surefire-plugin-3.5.4.jar:/root/.m2/repository/org/apache/maven/plugins/maven-deploy-plugin/3.1.4/maven-deploy-plugin-3.1.4.jar:/root/.m2/repository/org/apache/maven/plugins/maven-enforcer-plugin/3.6.2/maven-enforcer-plugin-3.6.2.jar:/root/.m2/repository/org/apache/maven/plugins/maven-antrun-plugin/3.2.0/maven-antrun-plugin-3.2.0.jar:/root/.m2/repository/org/apache/maven/plugins/maven-resources-plugin/3.4.0/maven-resources-plugin-3.4.0.jar:/root/.m2/repository/org/apache/maven/plugins/maven-resources-plugin/3.3.1/maven-resources-plugin-3.3.1.jar:/root/.m2/repository/org/apache/maven/plugins/maven-artifact-plugin/3.6.1/maven-artifact-plugin-3.6.1.jar:/root/.m2/repository/org/apache/maven/plugins/maven-dependency-plugin/3.6.1/maven-dependency-plugin-3.6.1.jar:/root/.m2/repository/org/apache/maven/plugins/maven-assembly-plugin/3.6.0/maven-assembly-plugin-3.6.0.jar:/root/.m2/repository/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.jar:/root/.m2/repository/org/apache/maven/plugins/maven-failsafe-plugin/3.5.4/maven-failsafe-plugin-3.5.4.jar:/root/.m2/repository/org/apache/maven/plugins/maven-jar-plugin/3.5.0/maven-jar-plugin-3.5.0.jar:/root/.m2/repository/org/apache/maven/plugins/maven-site-plugin/3.12.1/maven-site-plugin-3.12.1.jar:/root/.m2/repository/org/apache/maven/maven-settings/3.1.0/maven-settings-3.1.0.jar:/root/.m2/repository/org/apache/maven/maven-core/3.1.0/maven-core-3.1.0.jar:/root/.m2/repository/org/apache/maven/maven-repository-metadata/3.1.0/maven-repository-metadata-3.1.0.jar:/root/.m2/repository/org/apache/maven/maven-plugin-api/3.1.0/maven-plugin-api-3.1.0.jar:/root/.m2/repository/org/apache/maven/shared/maven-artifact-transfer/0.13.1/maven-artifact-transfer-0.13.1.jar:/root/.m2/repository/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar:/root/.m2/repository/org/apache/maven/shared/maven-dependency-analyzer/1.13.2/maven-dependency-analyzer-1.13.2.jar:/root/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar:/root/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar:/root/.m2/repository/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.jar:/root/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.jar:/root/.m2/repository/org/apache/maven/shared/maven-filtering/3.4.0/maven-filtering-3.4.0.jar:/root/.m2/repository/org/apache/maven/maven-settings-builder/3.1.0/maven-settings-builder-3.1.0.jar:/root/.m2/repository/org/apache/maven/maven-model/3.2.5/maven-model-3.2.5.jar:/root/.m2/repository/org/apache/maven/doxia/doxia-core/1.11.1/doxia-core-1.11.1.jar:/root/.m2/repository/org/apache/maven/doxia/doxia-module-xhtml/1.11.1/doxia-module-xhtml-1.11.1.jar:/root/.m2/repository/org/apache/maven/doxia/doxia-logging-api/1.11.1/doxia-logging-api-1.11.1.jar:/root/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.11.1/doxia-sink-api-1.11.1.jar:/root/.m2/repository/org/apache/maven/doxia/doxia-module-xhtml5/1.11.1/doxia-module-xhtml5-1.11.1.jar:/root/.m2/repository/org/apache/maven/doxia/doxia-decoration-model/1.11.1/doxia-decoration-model-1.11.1.jar:/root/.m2/repository/org/apache/maven/doxia/doxia-site-renderer/1.11.1/doxia-site-renderer-1.11.1.jar:/root/.m2/repository/org/apache/maven/doxia/doxia-skin-model/1.11.1/doxia-skin-model-1.11.1.jar:/root/.m2/repository/org/apache/maven/doxia/doxia-integration-tools/1.11.1/doxia-integration-tools-1.11.1.jar:/root/.m2/repository/org/apache/maven/maven-artifact/3.1.0/maven-artifact-3.1.0.jar:/root/.m2/repository/org/apache/maven/maven-model-builder/3.1.0/maven-model-builder-3.1.0.jar:/root/.m2/repository/org/apache/maven/enforcer/enforcer-rules/3.6.2/enforcer-rules-3.6.2.jar:/root/.m2/repository/org/apache/maven/enforcer/enforcer-api/3.6.2/enforcer-api-3.6.2.jar:/root/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.19.0/commons-lang3-3.19.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.16.0/commons-lang3-3.16.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar:/root/.m2/repository/org/apache/velocity/velocity-tools/2.0/velocity-tools-2.0.jar:/root/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2.4/httpcore5-h2-5.2.4.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2.4/httpcore5-5.2.4.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/root/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.3.1/httpclient5-5.3.1.jar:/root/.m2/repository/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar:
+[334][environment]                           -source 11 -target 11
+[334][environment]                           src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java
+[334][environment]                           src/main/java/com/google/gson/typeadapters/PostConstructAdapterFactory.java
+[334][environment]                           src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java
+[334][environment]                           src/main/java/com/google/gson/interceptors/Intercept.java
+[334][environment]                           src/main/java/com/google/gson/interceptors/JsonPostDeserializer.java
+[334][environment]                           src/main/java/com/google/gson/interceptors/InterceptorFactory.java
+[334][environment]                           src/main/java/com/google/gson/extras/examples/rawcollections/RawCollectionsExample.java
+[334][environment] Available memory at startup: 22851 MB
+[334][environment] Active checkers: self-in-block (C/C++/ObjC), parameter-not-null-checked (C/C++/ObjC), starvation (C/C++/ObjC, Java), siof (C/C++/ObjC), racerd (C/C++/ObjC, C#/.Net, Java), pulse (C/C++/ObjC, C#/.Net, Erlang, Hack, Java, Python), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java)
+[334][environment] Scheduler: restart
+[334][environment] Cores used: 10
+[334][environment] Infer version v1.2.0
+[334][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[334][environment] 
+[334][   progress] Capturing in javac mode...
+[334][      debug] Current working directory: '/m4/gson/extras'
+[334][      debug] Trying to execute: javac '-J-Duser.language=en' '@/m4/gson/extras/infer-out/tmp/javac_args.tmp.7c708a' 2>'/m4/gson/extras/infer-out/tmp/javac.tmp.1a7943.out'
+[334][      debug] *** Success. Logs:
+[334][      debug] Translating 7 source files (11 classes)
+[334][      debug] Global tenv size global_tenv_size_mb: 0
+[334][      debug] done capturing all files
+[334][      debug] GC stats for capture:
+[334][      debug]   minor_words: 9.15091e+06
+[334][      debug]   promoted_words: 1.49065e+06
+[334][      debug]   major_words: 1.56733e+06
+[334][      debug]   minor_collections: 18
+[334][      debug]   major_collections: 2
+[334][      debug]   compactions: 0
+[334][      debug]   top_heap_words: 2330624
+[334][      debug]   
+[334][environment] Parallel jobs: 10
+[334][   progress] Found 7 source files to analyze in /m4/gson/extras/infer-out
+[366][   progress] Analysing block of 200 procs, starting with Object RuntimeTypeAdapterFactory$1.read(JsonReader)
+[365][   progress] Analysing block of 200 procs, starting with int UtcDateTypeAdapter.parseInt(String,int,int)
+[372][   progress] Analysing block of 200 procs, starting with RuntimeTypeAdapterFactory RuntimeTypeAdapterFactory.recognizeSubtypes()
+[371][   progress] Analysing block of 200 procs, starting with UtcDateTypeAdapter.<init>()
+[369][   progress] Analysing block of 200 procs, starting with Object PostConstructAdapterFactory$PostConstructAdapter.read(JsonReader)
+[370][   progress] Analysing block of 200 procs, starting with void RuntimeTypeAdapterFactory$1.write(JsonWriter,Object)
+[367][   progress] Analysing block of 200 procs, starting with Object InterceptorFactory$InterceptorAdapter.read(JsonReader)
+[368][   progress] Analysing block of 200 procs, starting with void UtcDateTypeAdapter.<clinit>()
+[373][   progress] Analysing block of 200 procs, starting with TypeAdapter PostConstructAdapterFactory.create(Gson,TypeToken)
+[374][   progress] Analysing block of 200 procs, starting with RuntimeTypeAdapterFactory$1.<init>(RuntimeTypeAdapterFactory,TypeAdapter,Map,Map)
+[368][   progress] src/main/java/com/google/gson/interceptors/JsonPostDeserializer.java starting
+[368][   progress] src/main/java/com/google/gson/interceptors/JsonPostDeserializer.java DONE
+[368][   progress] src/main/java/com/google/gson/interceptors/InterceptorFactory.java starting
+[372][   progress] src/main/java/com/google/gson/interceptors/Intercept.java starting
+[372][   progress] src/main/java/com/google/gson/interceptors/Intercept.java DONE
+[372][   progress] src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java starting
+[368][   progress] src/main/java/com/google/gson/interceptors/InterceptorFactory.java DONE
+[368][   progress] src/main/java/com/google/gson/typeadapters/PostConstructAdapterFactory.java starting
+[368][   progress] src/main/java/com/google/gson/typeadapters/PostConstructAdapterFactory.java DONE
+[372][   progress] src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java DONE
+[368][   progress] src/main/java/com/google/gson/extras/examples/rawcollections/RawCollectionsExample.java starting
+[372][   progress] src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java starting
+[372][   progress] src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java DONE
+[368][   progress] src/main/java/com/google/gson/extras/examples/rawcollections/RawCollectionsExample.java DONE
+[367][   progress] src/main/java/com/google/gson/extras/examples/rawcollections/RawCollectionsExample.java starting
+[367][   progress] src/main/java/com/google/gson/extras/examples/rawcollections/RawCollectionsExample.java DONE
+[372][   progress] src/main/java/com/google/gson/interceptors/InterceptorFactory.java starting
+[372][   progress] src/main/java/com/google/gson/interceptors/InterceptorFactory.java DONE
+[367][   progress] src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java starting
+[366][   progress] src/main/java/com/google/gson/typeadapters/PostConstructAdapterFactory.java starting
+[367][   progress] src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java DONE
+[366][   progress] src/main/java/com/google/gson/typeadapters/PostConstructAdapterFactory.java DONE
+[367][   progress] src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java starting
+[367][   progress] src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java DONE
+[368][   progress] src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java starting
+[368][   progress] src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java DONE
+[334][      debug] Backend stats:
+[334][      debug]   summary_file_try_load= 2516
+[334][      debug]   summary_read_from_disk= 64
+[334][      debug]   summary_cache_hits= 356 (12%)
+[334][      debug]   summary_cache_misses= 2516
+[334][      debug]   ondemand_procs_analyzed= 38
+[334][      debug]   proc_locker_lock_time_user= 0.00613600
+[334][      debug]   proc_locker_lock_time_sys= 0.00187700
+[334][      debug]   proc_locker_lock_time_wall= 0.00823246
+[334][      debug]   proc_locker_lock_time_oncpu_pct= 97%
+[334][      debug]   proc_locker_unlock_time_user= 0.00165900
+[334][      debug]   proc_locker_unlock_time_sys= 0.00018500
+[334][      debug]   proc_locker_unlock_time_wall= 0.00187433
+[334][      debug]   proc_locker_unlock_time_oncpu_pct= 98%
+[334][      debug]   restart_scheduler_useful_time_user= 3.09300200
+[334][      debug]   restart_scheduler_useful_time_sys= 0.38687000
+[334][      debug]   restart_scheduler_useful_time_wall= 3.89227538
+[334][      debug]   restart_scheduler_useful_time_oncpu_pct= 89%
+[334][      debug]   restart_scheduler_total_time_user= 3.10368400
+[334][      debug]   restart_scheduler_total_time_sys= 0.39885400
+[334][      debug]   restart_scheduler_total_time_wall= 3.91493317
+[334][      debug]   restart_scheduler_total_time_oncpu_pct= 89%
+[334][      debug]   pulse_aliasing_contradictions= 0
+[334][      debug]   pulse_args_length_contradictions= 0
+[334][      debug]   pulse_captured_vars_length_contradictions= 0
+[334][      debug]   pulse_disjuncts_dropped= 693
+[334][      debug]   pulse_interrupted_loops= 9
+[334][      debug]   pulse_summaries_contradictions= 1
+[334][      debug]   pulse_summaries_unsat_for_caller= 28
+[334][      debug]   pulse_summaries_unsat_for_caller_percent= 73
+[334][      debug]   pulse_summaries_with_some_unreachable_nodes= 7
+[334][      debug]   pulse_summaries_with_some_unreachable_nodes_percent= 18
+[334][      debug]   pulse_summaries_with_some_unreachable_returns= 0
+[334][      debug]   pulse_summaries_with_some_unreachable_returns_percent= 0.0%
+[334][      debug]   pulse_summaries_count= [1 -> 15, 2 -> 2, 3 -> 5, 4 -> 2, 11 -> 1, 12 -> 1, 13 -> 1, 15 -> 2, 20 -> 6, 40 -> 3]
+[334][      debug]   pulse_summaries_total_disjuncts= 348
+[334][      debug]   pulse_summaries_count_0_continue_program= 0
+[334][      debug]   pulse_summaries_count_0_percent= 0
+[334][      debug]   topl_reachable_calls= 0
+[334][      debug]   timeouts= 0
+[334][      debug]   timings= timings for fragment-retains-view:
+[334][      debug]     p10: 0.000001s p20: 0.000001s p30: 0.000001s p40: 0.000001s
+[334][      debug]     p50: 0.000001s p60: 0.000002s p70: 0.000002s p80: 0.000023s
+[334][      debug]     p90: 0.000026s p95: 0.000045s p96: 0.000046s p97: 0.000048s
+[334][      debug]     p98: 0.000050s p99: 0.000052s p99.9: 0.000052s p99.99: 0.000052s 
+[334][      debug]   timings for inefficient-keyset-iterator:
+[334][      debug]     p10: 0.000010s p20: 0.000015s p30: 0.000019s p40: 0.000021s
+[334][      debug]     p50: 0.000032s p60: 0.000073s p70: 0.000230s p80: 0.000695s
+[334][      debug]     p90: 0.001217s p95: 0.001408s p96: 0.001455s p97: 0.001493s
+[334][      debug]     p98: 0.001531s p99: 0.001557s p99.9: 0.001557s p99.99: 0.001557s 
+[334][      debug]   timings for pulse:
+[334][      debug]     p10: 0.002147s p20: 0.004684s p30: 0.012319s p40: 0.016180s
+[334][      debug]     p50: 0.020233s p60: 0.038908s p70: 0.047138s p80: 0.094212s
+[334][      debug]     p90: 0.214404s p95: 0.238812s p96: 0.240265s p97: 0.246283s
+[334][      debug]     p98: 0.252555s p99: 0.256847s p99.9: 0.256847s p99.99: 0.256847s 
+[334][      debug]   timings for racerd:
+[334][      debug]     p10: 0.000124s p20: 0.000204s p30: 0.000433s p40: 0.000709s
+[334][      debug]     p50: 0.001133s p60: 0.002016s p70: 0.003749s p80: 0.004952s
+[334][      debug]     p90: 0.007007s p95: 0.007497s p96: 0.007564s p97: 0.007953s
+[334][      debug]     p98: 0.008359s p99: 0.008637s p99.9: 0.008637s p99.99: 0.008637s 
+[334][      debug]   timings for starvation:
+[334][      debug]     p10: 0.000035s p20: 0.000083s p30: 0.000338s p40: 0.000520s
+[334][      debug]     p50: 0.000792s p60: 0.001672s p70: 0.002482s p80: 0.003444s
+[334][      debug]     p90: 0.006058s p95: 0.007632s p96: 0.008320s p97: 0.009437s
+[334][      debug]     p98: 0.010876s p99: 0.012042s p99.9: 0.012042s p99.99: 0.012042s 
+[334][      debug]   timings for preanalysis:
+[334][      debug]     p10: 0.000380s p20: 0.000568s p30: 0.000959s p40: 0.001271s
+[334][      debug]     p50: 0.001648s p60: 0.005373s p70: 0.009855s p80: 0.060424s
+[334][      debug]     p90: 0.068622s p95: 0.073043s p96: 0.073114s p97: 0.073446s
+[334][      debug]     p98: 0.073975s p99: 0.074403s p99.9: 0.074403s p99.99: 0.074403s 
+[334][      debug]   
+[334][      debug]   longest_proc_duration_heap= [
+[334][      debug]   775744us: src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java: Object UtcDateTypeAdapter.read(JsonReader)
+[334][      debug]   750689us: src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java: Date UtcDateTypeAdapter.read(JsonReader)
+[334][      debug]   355629us: src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java: void RuntimeTypeAdapterFactory$1.write(JsonWriter,Object)
+[334][      debug]   353640us: src/main/java/com/google/gson/typeadapters/PostConstructAdapterFactory.java: TypeAdapter PostConstructAdapterFactory.create(Gson,TypeToken)
+[334][      debug]   316901us: src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java: Date UtcDateTypeAdapter.parse(String,ParsePosition)
+[334][      debug]   309690us: src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java: void UtcDateTypeAdapter.write(JsonWriter,Object)
+[334][      debug]   293851us: src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java: void UtcDateTypeAdapter.write(JsonWriter,Date)
+[334][      debug]   279996us: src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java: String UtcDateTypeAdapter.format(Date,boolean,TimeZone)
+[334][      debug]   208572us: src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java: Object RuntimeTypeAdapterFactory$1.read(JsonReader)
+[334][      debug]   202201us: src/main/java/com/google/gson/typeadapters/UtcDateTypeAdapter.java: int UtcDateTypeAdapter.parseInt(String,int,int)
+[334][      debug]   ]
+[334][      debug]   process_times_user= 3.15430600
+[334][      debug]   process_times_sys= 0.42161300
+[334][      debug]   process_times_wall= 10.14424321
+[334][      debug]   process_times_oncpu_pct= 35%
+[334][      debug]   useful_times_user= 3.14806100
+[334][      debug]   useful_times_sys= 0.42098200
+[334][      debug]   useful_times_wall= 3.98244942
+[334][      debug]   useful_times_oncpu_pct= 90%
+[334][      debug]   spec_store_times_user= 0.62111000
+[334][      debug]   spec_store_times_sys= 0.01202400
+[334][      debug]   spec_store_times_wall= 1.02194629
+[334][      debug]   spec_store_times_oncpu_pct= 62%
+[334][      debug]   
+[334][      debug] GC stats for backend_stats.gc_stats_add.:
+[334][      debug]   minor_words: 4.60278e+08
+[334][      debug]   promoted_words: 9.85681e+06
+[334][      debug]   major_words: 1.0438e+07
+[334][      debug]   minor_collections: 451
+[334][      debug]   major_collections: 33
+[334][      debug]   compactions: 0
+[334][      debug]   top_heap_words: 28602880
+[334][      debug]   
+[334][      debug] GC stats for backend_stats.gc_stats_max.:
+[334][      debug]   minor_words: 3.26901e+08
+[334][      debug]   promoted_words: 4.39078e+06
+[334][      debug]   major_words: 4.51965e+06
+[334][      debug]   minor_collections: 317
+[334][      debug]   major_collections: 11
+[334][      debug]   compactions: 0
+[334][      debug]   top_heap_words: 4077568
+[334][      debug]   
+[334][      debug] Average over 10 processes
+[334][      debug] GC stats for backend_stats.gc_stats_average.:
+[334][      debug]   minor_words: 4.60278e+07
+[334][      debug]   promoted_words: 985681
+[334][      debug]   major_words: 1.0438e+06
+[334][      debug]   minor_collections: 45
+[334][      debug]   major_collections: 3
+[334][      debug]   compactions: 0
+[334][      debug]   top_heap_words: 2860288
+[334][      debug]   
+[334][      debug] Analysis phase finished in 1.04s
+[334][      debug] backend_stats.scheduler_process_analysis_time_user= 0.06481700
+[334][      debug] backend_stats.scheduler_process_analysis_time_sys= 0.04726300
+[334][      debug] backend_stats.scheduler_process_analysis_time_wall= 1.03299192
+[334][      debug] backend_stats.scheduler_process_analysis_time_oncpu_pct= 11%
+[334][      debug] GC stats for analysis_scheduler:
+[334][      debug]   minor_words: 2.33685e+06
+[334][      debug]   promoted_words: 46571
+[334][      debug]   major_words: 378318
+[334][      debug]   minor_collections: 5
+[334][      debug]   major_collections: 3
+[334][      debug]   compactions: 1
+[334][      debug]   top_heap_words: 2330624
+[334][      debug]   
+[334][      debug] GC stats for report:
+[334][      debug]   minor_words: 17720
+[334][      debug]   promoted_words: 0
+[334][      debug]   major_words: 514
+[334][      debug]   minor_collections: 0
+[334][      debug]   major_collections: 0
+[334][      debug]   compactions: 0
+[334][      debug]   top_heap_words: 2330624
+[334][      debug]   
+[334][      debug] GC stats for main_process_full:
+[334][      debug]   minor_words: 1.44759e+07
+[334][      debug]   promoted_words: 2.24491e+06
+[334][      debug]   major_words: 2.70072e+06
+[334][      debug]   minor_collections: 31
+[334][      debug]   major_collections: 6
+[334][      debug]   compactions: 1
+[334][      debug]   top_heap_words: 2330624
+[334][      debug]   
+[334][      debug] Sqlite write daemon: waiting for process 335 to finish
+[335][      debug] Detected 2 spec overwrites.
+[335][      debug] Sqlite write daemon: terminating
+[335][      debug] dbwriter.useful_time_user= 0.07489500
+[335][      debug] dbwriter.useful_time_sys= 0.01355200
+[335][      debug] dbwriter.useful_time_wall= 0.29205805
+[335][      debug] dbwriter.useful_time_oncpu_pct= 30%
+[335][      debug] dbwriter.store_sql_user= 0.00654500
+[335][      debug] dbwriter.store_sql_sys= 0.00114200
+[335][      debug] dbwriter.store_sql_wall= 0.00774120
+[335][      debug] dbwriter.store_sql_oncpu_pct= 99%
+[335][      debug] dbwriter.store_sql_pct= 9%
+[335][      debug] dbwriter.total_time_user= 0.08848200
+[335][      debug] dbwriter.total_time_sys= 0.02064200
+[335][      debug] dbwriter.total_time_wall= 3.18495429
+[335][      debug] dbwriter.total_time_oncpu_pct= 3%
+[335][      debug] [334][      debug] Sqlite write daemon: process 335 terminated
+[334][     result] 
+  No issues found  
