@@ -60,27 +60,29 @@ After:
 
 \## Analysis
 
-The results were identical before and after the change. Infer reported 
+The results were identical before and after the change. Infer reported
 
 the same 14 issues in the same files at the same line numbers.
 
 
 
-This demonstrates that Infer's path-sensitive analysis is stable under 
+This demonstrates that Infer's path-sensitive analysis is stable under
 
-semantics-preserving code changes. Unlike pattern-based tools such as 
+semantics-preserving code changes. Unlike pattern-based tools such as
 
-Semgrep which match syntactic patterns, Infer reasons about program 
+Semgrep which match syntactic patterns, Infer reasons about program
 
-behavior and data flow. Renaming a variable does not change the execution 
+behavior and data flow. Renaming a variable does not change the execution
 
 path or data flow, so Infer's findings remain unchanged.
 
 
 
-This stability is an important property for a static analysis tool — 
+This stability is an important property for a static analysis tool —
 
-engineers can refactor code without fear of introducing false positives 
+engineers can refactor code without fear of introducing false positives
 
 or losing existing findings.
+
+
 
