@@ -204,7 +204,7 @@ Failure location & JsonReader.java & 1492 & The unprotected write to \texttt{par
 
 \textbf{T3. Refactoring robustness} Semgrep would likely not detect this issue unless it had a customized rule that captured the concurrency pattern. A simple refactor such as renaming \texttt{next()} to another method name could evade pattern-based matching. Infer would still likely report the issue because it performs path-sensitive analysis over the same unsynchronized path to shared mutable state.
 
-The teammate markdown also records several RacerD limitations that are relevant to this interpretation:
+There are several RacerD limitations that are relevant to this interpretation:
 \begin{itemize}
 \item it looks for races involving syntactically identical access paths and may miss races due to aliasing
 \item it may miss races caused by a locally declared object escaping its scope
@@ -251,7 +251,7 @@ public JsonElement next() throws JsonParseException {
 }
 \end{lstlisting}
 
-After re-running Infer, the issue disappeared from the output for this specific location. The teammate markdown also notes that both issue \#0 and issue \#1 disappeared because they pointed to the same underlying issue. The conclusion from this validation was that the synchronization eliminates the warning, but may not reflect Gson's intended design.
+After re-running Infer, the issue disappeared from the output for this specific location. Note: both issue \#0 and issue \#1 disappeared because they pointed to the same underlying issue. The conclusion from this validation was that the synchronization eliminates the warning, but may not reflect Gson's intended design.
 
 \subsubsection*{Issue B: DefaultDateTypeAdapter.write(...)}
 \textbf{Issue type and name:} Thread Safety Violation. Read/write race. Non-private method \texttt{DefaultDateTypeAdapter.write(...)} indirectly reads from \texttt{out.deferredName} without synchronization.
@@ -312,7 +312,9 @@ Failure location & DefaultDateTypeAdapter.java & 142 & Infer reports the race he
 \textbf{Issue summary} Both issues were classified as likely false positives due to Gson's non-thread-safe design. Even so, the triage demonstrates Infer's strength in identifying potential concurrency failures and constructing a coherent explanation of how they could arise.
 
 \subsection{Experiment 4: Stability Under Small Code Changes}
-The teammate markdown reported three separate semantics-preserving modifications. Each was tested against the 14-issue baseline.
+Although the experiment required only one method change. We felt it would be better
+to try three separate semantics-preserving modifications in order to provide a more intensive stress test 
+of the infer System. Each method change was tested against the 14-issue baseline.
 
 \textbf{Method 1: Variable renaming}
 \begin{itemize}
@@ -374,7 +376,7 @@ Semgrep was run using Semgrep 1.156.0, installed via \texttt{pip3 install semgre
 \item Target: \texttt{gson/src/main/java}, covering 86 Java source files with tests excluded as instructed
 \end{itemize}
 
-The teammate markdown also records the choice between \texttt{r/java} and \texttt{p/java}. The broader \texttt{r/java} pack was selected because it provided wider coverage, while \texttt{p/java} produced zero findings on Gson.
+There was also the choice between \texttt{r/java} and \texttt{p/java}. The broader \texttt{r/java} pack was selected because it provided wider coverage, while \texttt{p/java} produced zero findings on Gson.
 
 \begin{lstlisting}[language=bash]
 semgrep --config 'r/java' --json /m4/gson/gson/src/main/java \

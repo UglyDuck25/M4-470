@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.2)  26 MAR 2026 15:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.2)  26 MAR 2026 15:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -833,14 +833,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--301
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.325 \item S
-             tability analysis: this minor code change did not affect the fi...]
-Overfull \hbox (18.51335pt too wide) in paragraph at lines 331--332
+l.326 \item N
+             ew issues introduced: none]
+Overfull \hbox (18.51335pt too wide) in paragraph at lines 333--334
 []\T1/lmr/m/n/10.95 (-20) Path: \T1/lmtt/m/n/10.95 /m4/gson/gson/src/test/java/com/google/gson/functional/ConcurrencyTest.java 
  []
 
 
-Overfull \hbox (30.01082pt too wide) in paragraph at lines 342--343
+Overfull \hbox (30.01082pt too wide) in paragraph at lines 344--345
 []\T1/lmr/m/n/10.95 (-20) Path: \T1/lmtt/m/n/10.95 /m4/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java 
  []
 
@@ -848,9 +848,9 @@ Overfull \hbox (30.01082pt too wide) in paragraph at lines 342--343
 pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.379 \begin{lstlisting}[language=bash]
-                                       ]
-Overfull \hbox (7.88855pt too wide) in paragraph at lines 407--408
+l.380 
+      ]
+Overfull \hbox (7.88855pt too wide) in paragraph at lines 409--410
 \T1/lmr/m/n/10.95 (-20) flagged \T1/lmtt/m/n/10.95 JsonStreamParser.java\T1/lmr/m/n/10.95 (-20) , \T1/lmtt/m/n/10.95 DefaultDateTypeAdapter.java\T1/lmr/m/n/10.95 (-20) , \T1/lmtt/m/n/10.95 SqlDateTypeAdapter.java\T1/lmr/m/n/10.95 (-20) , and
  []
 
@@ -858,21 +858,21 @@ Overfull \hbox (7.88855pt too wide) in paragraph at lines 407--408
 pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.417 
+l.419 
       ] [10] (./TechTitans_Milestone4_report.aux)
 Package rerunfilecheck Info: File `TechTitans_Milestone4_report.out' has not changed.
 (rerunfilecheck)             Checksum: D7709BD3D765F749BE624F4E7358B24C;2528.
  ) 
 Here is how much of TeX's memory you used:
- 35308 strings out of 476025
- 805712 string characters out of 5790018
- 2057388 words of memory out of 5000000
+ 35306 strings out of 476025
+ 805690 string characters out of 5790018
+ 2053388 words of memory out of 5000000
  54954 multiletter control sequences out of 15000+600000
- 577438 words of font info for 138 fonts, out of 8000000 for 9000
+ 577355 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,94p,1054b,2284s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on TechTitans_Milestone4_report.pdf (10 pages, 281430 bytes).
+Output written on TechTitans_Milestone4_report.pdf (10 pages, 281419 bytes).
 PDF statistics:
  297 PDF objects out of 1000 (max. 8388607)
  262 compressed objects within 3 object streams
