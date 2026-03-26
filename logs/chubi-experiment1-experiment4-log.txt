@@ -1,0 +1,49 @@
+Experiment 1 & 4 Execution Log 
+OS: Windows 11 + WSL2 Ubuntu 24.04
+
+--- Experiment 1 Commands ---
+# Install Infer
+VERSION=1.1.0
+curl -sSL "https://github.com/facebook/infer/releases/download/v${VERSION}/infer-linux64-v${VERSION}.tar.xz" | sudo tar -C /opt -xJ
+echo 'export PATH="/opt/infer-linux64-v1.1.0/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+infer --version
+# Output: Infer version v1.1.0
+
+# Clone Gson
+git clone https://github.com/google/gson.git
+cd gson
+git log -1 --oneline
+# Output: b7d59549
+
+# Build verification
+mvn clean package -DskipTests
+# Result: 7/8 modules SUCCESS
+
+# LOC count
+cloc ~/gson/gson/src/main/java
+# Result: 10,277 lines, 86 files
+
+# Infer analysis command
+CP=$(find ~/.m2 -name "*.jar" | tr '\n' ':')
+infer run -- javac -cp "$CP" -source 11 -target 11 \
+  $(find src/main/java -name "*.java" ! -name "module-info.java") \
+  $(find target/generated-sources -name "*.java")
+# Result: 15 issues (14 THREAD_SAFETY_VIOLATION, 1 NULL_DEREFERENCE)
+# Runtime: ~20.6 seconds
+
+--- Experiment 4 Commands ---
+# Make small change - rename variable in JavaVersion.java
+# Changed: num -> digits in extractBeginningInt() method
+sed -i 's/StringBuilder num = new StringBuilder();/StringBuilder digits = new StringBuilder();/' ~/gson/gson/src/main/java/com/google/gson/internal/JavaVersion.java
+sed -i 's/num.append(c);/digits.append(c);/' ~/gson/gson/src/main/java/com/google/gson/internal/JavaVersion.java
+sed -i 's/return Integer.parseInt(num.toString());/return Integer.parseInt(digits.toString());/' ~/gson/gson/src/main/java/com/google/gson/internal/JavaVersion.java
+
+# Re-run Infer
+mvn clean compile -DskipTests
+CP=$(find ~/.m2 -name "*.jar" | tr '\n' ':')
+infer run -- javac -cp "$CP" -source 11 -target 11 \
+  $(find src/main/java -name "*.java" ! -name "module-info.java") \
+  $(find target/generated-sources -name "*.java")
+# Result: 15 issues (14 THREAD_SAFETY_VIOLATION, 1 NULL_DEREFERENCE)
+# IDENTICAL to baseline - no change
