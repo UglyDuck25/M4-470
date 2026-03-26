@@ -5,6 +5,36 @@
 This project runs Infer static analysis on the Gson library inside a Docker container.
 Everything is automated, dependencies, Infer, and Gson are all set up inside the container.
 
+## Environment and Tool Documentation
+
+**Installation Method and Infer Version**  
+- Infer installed inside Docker container.  
+- Infer version: 1.2.0 (`infer --version`).  
+
+**Operating System**  
+- Windows (system running Docker).  
+
+**Java Version**  
+- Java 11.  
+
+**Build Tool and Version**  
+- Maven 3.9.0.  
+
+**Repository URL and Commit Used**  
+- Gson repository:(https://github.com/google/gson)
+- Commit hash: run `git rev-parse HEAD` inside `/m4/gson/gson` to get the exact commit.
+
+**Total Lines of Code**  
+- 36,422 LOC.  
+
+**Setup Challenge and Solution**  
+- **Challenge:** `infer run --mvn` fails due to `module-info.java`.  
+- **Solution:** Manually compile with `javac` using all `.jar` dependencies, then run Infer:  
+```bash
+CP=$(find ~/.m2 -name "*.jar" | tr '\n' ':')
+infer run -- javac -cp "$CP" -source 11 -target 11 \
+  $(find src/main/java -name "*.java" ! -name "module-info.java") \
+  $(find target/generated-sources -name "*.java")
 ---
 
 ## Setup
