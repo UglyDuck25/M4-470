@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.2)  26 MAR 2026 15:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.2)  26 MAR 2026 15:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -730,67 +730,67 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 82.
  [2{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Package pgfplots info on input line 131: Using 'lua backend=false' for axis: x coord trafo unsupported.
+Package pgfplots info on input line 132: Using 'lua backend=false' for axis: x coord trafo unsupported.
 
 
-Package pgfplots Warning: Axis range for axis x is approximately empty; enlarging it (it is [0.0:0.0]) on input line 133.
+Package pgfplots Warning: Axis range for axis x is approximately empty; enlarging it (it is [0.0:0.0]) on input line 134.
 
  [warning /pgfplots/warning/approx empty range enlarged]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 133.
+(Font)              <10> on input line 134.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 133.
+(Font)              <7> on input line 134.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 133.
+(Font)              <5> on input line 134.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) [3
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.160 public 
+l.161 public 
              JsonElement next() {{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.160 public 
+l.161 public 
              JsonElement next() {]
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 []|\T1/lmtt/m/n/10.95 Streams.parse(parser) \T1/lmr/m/n/10.95 (+20) per-forms
  []
 
 
-Underfull \hbox (badness 4595) in paragraph at lines 198--198
+Underfull \hbox (badness 4595) in paragraph at lines 199--199
 \T1/lmr/m/n/10.95 (+20) JSON pars-ing op-er-a-tions on the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 []|\T1/lmr/m/n/10.95 (+20) The un-pro-tected write to
  []
 
 
-Underfull \hbox (badness 5726) in paragraph at lines 198--198
+Underfull \hbox (badness 5726) in paragraph at lines 199--199
 \T1/lmtt/m/n/10.95 parser.limit \T1/lmr/m/n/10.95 (+20) oc-curs here. In-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 \T1/lmr/m/n/10.95 (+20) fer traces the path through
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 \T1/lmtt/m/n/10.95 Streams.parse(parser) \T1/lmr/m/n/10.95 (+20) to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 \T1/lmtt/m/n/10.95 peek()/doPeek()\T1/lmr/m/n/10.95 (+20) , then
  []
 
 
-Underfull \hbox (badness 5460) in paragraph at lines 198--198
+Underfull \hbox (badness 5460) in paragraph at lines 199--199
 \T1/lmtt/m/n/10.95 nextNonWhitespace()\T1/lmr/m/n/10.95 (+20) , and fi-nally
  []
 
@@ -798,34 +798,29 @@ Underfull \hbox (badness 5460) in paragraph at lines 198--198
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.202 
-      ]
-Overfull \hbox (0.67467pt too wide) in paragraph at lines 216--217
-[]\T1/lmr/m/n/10.95 (-20) It also notes that Rac-erD is trig-gered by ex-plicit \T1/lmtt/m/n/10.95 @ThreadSafe \T1/lmr/m/n/10.95 (-20) an-no-ta-tions or by use of \T1/lmtt/m/n/10.95 synchronized\T1/lmr/m/n/10.95 (-20) ;
- []
-
-[5]
-Overfull \hbox (34.10564pt too wide) in paragraph at lines 259--260
+l.203 
+      ] [5]
+Overfull \hbox (34.10564pt too wide) in paragraph at lines 260--261
 []\T1/lmr/bx/n/10.95 (-20) File and method: \T1/lmtt/m/n/10.95 src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java\T1/lmr/m/n/10.95 (-20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--301
+Underfull \hbox (badness 10000) in paragraph at lines 302--302
 []|\T1/lmr/m/n/10.95 (+20) The \T1/lmtt/m/n/10.95 out \T1/lmr/m/n/10.95 (+20) pa-ram-e-ter
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--301
+Underfull \hbox (badness 10000) in paragraph at lines 302--302
 \T1/lmr/m/n/10.95 (+20) con-tains the \T1/lmtt/m/n/10.95 deferredName
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--301
+Underfull \hbox (badness 10000) in paragraph at lines 302--302
 []|\T1/lmr/m/n/10.95 (+20) The \T1/lmtt/m/n/10.95 if (value == null)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--301
+Underfull \hbox (badness 10000) in paragraph at lines 302--302
 \T1/lmr/m/n/10.95 (+20) ac-cesses \T1/lmtt/m/n/10.95 out.deferredName
  []
 
@@ -833,14 +828,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--301
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.326 \item N
+l.327 \item N
              ew issues introduced: none]
-Overfull \hbox (18.51335pt too wide) in paragraph at lines 333--334
+Overfull \hbox (18.51335pt too wide) in paragraph at lines 334--335
 []\T1/lmr/m/n/10.95 (-20) Path: \T1/lmtt/m/n/10.95 /m4/gson/gson/src/test/java/com/google/gson/functional/ConcurrencyTest.java 
  []
 
 
-Overfull \hbox (30.01082pt too wide) in paragraph at lines 344--345
+Overfull \hbox (30.01082pt too wide) in paragraph at lines 345--346
 []\T1/lmr/m/n/10.95 (-20) Path: \T1/lmtt/m/n/10.95 /m4/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java 
  []
 
@@ -848,9 +843,9 @@ Overfull \hbox (30.01082pt too wide) in paragraph at lines 344--345
 pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.380 
+l.381 
       ]
-Overfull \hbox (7.88855pt too wide) in paragraph at lines 409--410
+Overfull \hbox (7.88855pt too wide) in paragraph at lines 410--411
 \T1/lmr/m/n/10.95 (-20) flagged \T1/lmtt/m/n/10.95 JsonStreamParser.java\T1/lmr/m/n/10.95 (-20) , \T1/lmtt/m/n/10.95 DefaultDateTypeAdapter.java\T1/lmr/m/n/10.95 (-20) , \T1/lmtt/m/n/10.95 SqlDateTypeAdapter.java\T1/lmr/m/n/10.95 (-20) , and
  []
 
@@ -858,7 +853,7 @@ Overfull \hbox (7.88855pt too wide) in paragraph at lines 409--410
 pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.419 
+l.420 
       ] [10] (./TechTitans_Milestone4_report.aux)
 Package rerunfilecheck Info: File `TechTitans_Milestone4_report.out' has not changed.
 (rerunfilecheck)             Checksum: D7709BD3D765F749BE624F4E7358B24C;2528.
@@ -872,7 +867,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,11n,94p,1054b,2284s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on TechTitans_Milestone4_report.pdf (10 pages, 281419 bytes).
+Output written on TechTitans_Milestone4_report.pdf (10 pages, 281545 bytes).
 PDF statistics:
  297 PDF objects out of 1000 (max. 8388607)
  262 compressed objects within 3 object streams

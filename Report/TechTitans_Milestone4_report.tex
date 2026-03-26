@@ -59,7 +59,7 @@ Behavioral static analysis relies on approximation. Because a tool cannot precis
 Infer uses formal-methods-inspired techniques such as abstract interpretation, compositional analysis, and path-sensitive reasoning. Instead of matching a local pattern, it attempts to explain how a runtime failure or race could arise across a chain of method calls. Semgrep uses a different strategy: it matches code against curated rules and is effective at finding known bug patterns, maintainability concerns, and security smells. The comparison is useful because the two tools answer different questions. Infer asks whether a failure path may exist; Semgrep asks whether the code matches a known risky pattern.
 
 \section{Experimental Setup}
-All experiments were carried out on the assigned repository \href{https://github.com/google/gson}{Gson}. The environment was prepared inside a Docker container to keep the toolchain reproducible.
+All experiments were carried out on the assigned repository \href{https://github.com/google/gson}{Gson}. The environment was prepared inside a Docker container to keep the toolchain reproducible. 
 
 \subsection{Environment Details}
 \begin{itemize}
@@ -90,6 +90,7 @@ semgrep --config 'r/java' --json /m4/gson/gson/src/main/java \
   > semgrep-java-ruleset.json 2> semgrep-java-stderr.log
 \end{lstlisting}
 
+Note: Although Milestone reqiurements ask to run Infer on the entire repository, we specified certain paths to avoid protobuf issues. 
 \section{Results}
 
 \subsection{Experiment 1: Tool Setup and Configuration}
@@ -213,7 +214,7 @@ There are several RacerD limitations that are relevant to this interpretation:
 \item it avoids reasoning about weak memory and Java \texttt{volatile}
 \end{itemize}
 
-It also notes that RacerD is triggered by explicit \texttt{@ThreadSafe} annotations or by use of \texttt{synchronized}; removing those signals can affect whether the issue is reported.
+The documentation also notes that RacerD is triggered by explicit \texttt{@ThreadSafe} annotations or by use of \texttt{synchronized}; removing those signals can affect whether the issue is reported.
 
 \textbf{Classification} Likely false positive. The surrounding Gson code explicitly documents the relevant classes as not thread-safe or conditionally thread-safe. In \texttt{JsonStreamParser}, the authors explain that cross-thread use requires external synchronization, and \texttt{JsonReader} is documented as not thread-safe. The warning therefore identifies a theoretical race under concurrent sharing, but that is not the intended usage model.
 
