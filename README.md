@@ -22,20 +22,20 @@ Everything is automated, dependencies, Infer, and Gson are all set up inside the
 
 **Repository URL and Commit Used**  
 - Gson repository:(https://github.com/google/gson)
-- Commit hash: run `git rev-parse HEAD` inside `/m4/gson/gson` to get the exact commit.
+- Commit hash: run `git rev-parse HEAD` inside `/m4/gson/gson` to get the exact commit before running Infer.
 
 **Total Lines of Code**  
 - 36,422 LOC.  
 
 **Setup Challenge and Solution**  
 - **Challenge:** `infer run --mvn` fails due to `module-info.java`.  
-- **Solution:** Manually compile with `javac` using all `.jar` dependencies, then run Infer:  
+**Solution:** Manually compile with `javac` using all `.jar` dependencies, then run Infer:  
+
 ```bash
 CP=$(find ~/.m2 -name "*.jar" | tr '\n' ':')
 infer run -- javac -cp "$CP" -source 11 -target 11 \
   $(find src/main/java -name "*.java" ! -name "module-info.java") \
   $(find target/generated-sources -name "*.java")
----
 
 ## Setup
 
