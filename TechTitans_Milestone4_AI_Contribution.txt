@@ -14,7 +14,7 @@ AI was used to understand the two tools being used and compare them. Used AI for
 
 3. Samuel Olukuwu (nds091)
 Contribution: 22%
-AI Usage:
+AI Usage: Ai was used in understanding implementation of the two repositories as well as for assistance in the dockerfile creation. It was also used to formalize infer report output for the stylistic changes.
 
 4. Haidari Alhaidari (vrl968)
 Contribution: 22%
