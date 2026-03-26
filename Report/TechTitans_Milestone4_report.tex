@@ -54,7 +54,7 @@ Static analysis operates on several aspects of a program, including program stru
 The focus of this report is not only the number of warnings produced by the tools, but also the plausibility of those warnings, the assumptions required for the reported failure paths, and the extent to which the analysis remains stable under small semantics-preserving edits. This is aligned with the milestone's emphasis on understanding why a reported issue could occur rather than simply counting findings.
 
 \section{Background}
-Behavioral static analysis relies on approximation. Because a tool cannot precisely evaluate every possible input and interprocedural execution path in a realistic codebase, it over-approximates program behavior. That makes whole-project analysis feasible, but also introduces false positives and false negatives. A reported issue may describe a path that is theoretically possible under the tool's model but unrealistic under the intended usage of the library.
+Behavioral static analysis relies on approximation. Because a tool cannot precisely evaluate every possible input and interprocedural execution path in a realistic codebase, it over-approximates program behavior. That makes whole-project analysis feasible, but also introduces false positives and false negatives.
 
 Infer uses formal-methods-inspired techniques such as abstract interpretation, compositional analysis, and path-sensitive reasoning. Instead of matching a local pattern, it attempts to explain how a runtime failure or race could arise across a chain of method calls. Semgrep uses a different strategy: it matches code against curated rules and is effective at finding known bug patterns, maintainability concerns, and security smells. The comparison is useful because the two tools answer different questions. Infer asks whether a failure path may exist; Semgrep asks whether the code matches a known risky pattern.
 
@@ -144,6 +144,20 @@ Because Infer reported only one issue category, both manually triaged issues wer
 \item Issue A: Issue \#0 from the most frequent category, Thread Safety Violation
 \item Issue B: Issue \#2 from the same category for comparison
 \end{itemize}
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+
 
 \subsubsection*{Issue A: JsonStreamParser.next()}
 \textbf{Issue type and name:} Thread Safety Violation. Unprotected write. Non-private method \texttt{JsonStreamParser.next()} indirectly writes to \texttt{this.parser.limit} outside of synchronization.
@@ -368,13 +382,13 @@ Temporary variable extraction & 14 & 14 & 0 \\
 Across all three methods, the issue count stayed the same, the issue type stayed the same, no issues moved, no issues disappeared, and no new issues appeared. These findings suggest that Infer is robust to superficial refactoring and focuses on execution semantics rather than syntax.
 
 \subsection{Experiment 5: Comparison with Semgrep}
-Semgrep was run using Semgrep 1.156.0, installed via \texttt{pip3 install semgrep} in the M4 Docker container on Debian 12.
+Semgrep was run using Semgrep 1.156.0, installed in the Docker container.
 
 \textbf{Semgrep setup}
 \begin{itemize}
 \item Config: \texttt{--config 'r/java'} using Java rules from the Semgrep Registry
 \item Rule volume: 312 rules downloaded, 114 applicable to the scanned files
-\item Target: \texttt{gson/src/main/java}, covering 86 Java source files with tests excluded as instructed
+\item Target: \texttt{gson/src/main/java}, covering 86 Java source files with tests excluded
 \end{itemize}
 
 There was also the choice between \texttt{r/java} and \texttt{p/java}. The broader \texttt{r/java} pack was selected because it provided wider coverage, while \texttt{p/java} produced zero findings on Gson.
