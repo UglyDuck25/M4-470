@@ -1,42 +1,10 @@
 \# Experiment 4: Stability Under Small Code Changes
 
-\*\*Chibuikem Emeka-Nwuba\*\*
 
 
+\## Modification
 
-\## Method Selected
-
-extractBeginningInt() in JavaVersion.java
-
-
-
-\## Change Made
-
-A semanticsvariable rename was made.
-
-The local variable 'num' was renamed to 'digits'.
-
-This change does not affect program behavior in any way.
-
-
-
-Before:
-
-&#x20; StringBuilder num = new StringBuilder();
-
-&#x20; num.append(c);
-
-&#x20; return Integer.parseInt(num.toString());
-
-
-
-After:
-
-&#x20; StringBuilder digits = new StringBuilder();
-
-&#x20; digits.append(c);
-
-&#x20; return Integer.parseInt(digits.toString());
+A small semantics-preserving change was applied to the Gson codebase. Specifically, a local variable in `JavaVersion.java` was renamed from `num` to `digits`. This change does not affect program behavior, control flow, or data flow.
 
 
 
@@ -44,45 +12,39 @@ After:
 
 
 
-| Metric | Before | After |
+| Metric | Before Change | After Change |
 
-|--------|--------|-------|
+|--------|-------------|-------------|
 
 | Total Issues | 14 | 14 |
 
-| Issues moved? | — | No |
+| Thread Safety Violations | 14 | 14 |
 
-| Issues disappeared? | — | No |
 
-| New issues appeared? | — | No |
+
+\- Issues moved: No  
+
+\- Issues disappeared: No  
+
+\- New issues appeared: No  
 
 
 
 \## Analysis
 
-The results were identical before and after the change. Infer reported
-
-the same 14 issues in the same files at the same line numbers.
 
 
-
-This demonstrates that Infer's path-sensitive analysis is stable under
-
-semantics-preserving code changes. Unlike pattern-based tools such as
-
-Semgrep which match syntactic patterns, Infer reasons about program
-
-behavior and data flow. Renaming a variable does not change the execution
-
-path or data flow, so Infer's findings remain unchanged.
+The results remained identical after the change. This demonstrates that Infer is stable under small, semantics-preserving modifications. Since Infer performs path-sensitive analysis, it reasons about execution behavior rather than syntactic structure.
 
 
 
-This stability is an important property for a static analysis tool —
-
-engineers can refactor code without fear of introducing false positives
-
-or losing existing findings.
+Renaming a variable does not impact the execution paths or memory access patterns, so the detected issues remain unchanged.
 
 
+
+\## Conclusion
+
+
+
+This experiment shows that Infer is robust to superficial code changes. Its analysis is based on program semantics, not syntax, making it reliable across refactoring operations that do not alter behavior.
 
