@@ -36,7 +36,7 @@ CP=$(find ~/.m2 -name "*.jar" | tr '\n' ':')
 infer run -- javac -cp "$CP" -source 11 -target 11 \
   $(find src/main/java -name "*.java" ! -name "module-info.java") \
   $(find target/generated-sources -name "*.java")
-
+```
 ## Setup
 
 ### 1. Build the Docker image
