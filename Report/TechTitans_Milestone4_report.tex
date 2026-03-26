@@ -90,7 +90,7 @@ semgrep --config 'r/java' --json /m4/gson/gson/src/main/java \
   > semgrep-java-ruleset.json 2> semgrep-java-stderr.log
 \end{lstlisting}
 
-Note: Although Milestone reqiurements ask to run Infer on the entire repository, we specified certain paths to avoid protobuf issues. 
+Note: Although Milestone reqiurements ask to run Infer on the entire repository, it couldn't be run on the entire repository due to missing protobuf and JUnit 5 dependencies so we analyzed infer on the code source directory (gson). Additionally, for verification, we ran Infer on \texttt{./proto} and \texttt{./extras} independently, where we found 0 issues.
 \section{Results}
 
 \subsection{Experiment 1: Tool Setup and Configuration}
@@ -205,7 +205,7 @@ Failure location & JsonReader.java & 1492 & The unprotected write to \texttt{par
 
 \textbf{T3. Refactoring robustness} Semgrep would likely not detect this issue unless it had a customized rule that captured the concurrency pattern. A simple refactor such as renaming \texttt{next()} to another method name could evade pattern-based matching. Infer would still likely report the issue because it performs path-sensitive analysis over the same unsynchronized path to shared mutable state.
 
-There are several RacerD limitations that are relevant to this interpretation:
+There are several RacerD limitations that are relevant to this interpretation, as documented in the Infer documentation:
 \begin{itemize}
 \item it looks for races involving syntactically identical access paths and may miss races due to aliasing
 \item it may miss races caused by a locally declared object escaping its scope

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.2)  26 MAR 2026 15:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.2)  26 MAR 2026 15:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -748,13 +748,13 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.161 public 
-             JsonElement next() {{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}
+l.160 @Override
+               {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.161 public 
-             JsonElement next() {]
+l.160 @Override
+               ]
 Underfull \hbox (badness 10000) in paragraph at lines 199--199
 []|\T1/lmtt/m/n/10.95 Streams.parse(parser) \T1/lmr/m/n/10.95 (+20) per-forms
  []
@@ -794,17 +794,17 @@ Underfull \hbox (badness 5460) in paragraph at lines 199--199
 \T1/lmtt/m/n/10.95 nextNonWhitespace()\T1/lmr/m/n/10.95 (+20) , and fi-nally
  []
 
-[4
+[4] [5
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.203 
-      ] [5]
+l.214 \item i
+             t avoids reasoning about weak memory and Java \texttt{volatile}]
 Overfull \hbox (34.10564pt too wide) in paragraph at lines 260--261
 []\T1/lmr/bx/n/10.95 (-20) File and method: \T1/lmtt/m/n/10.95 src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java\T1/lmr/m/n/10.95 (-20) ,
  []
 
-
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 302--302
 []|\T1/lmr/m/n/10.95 (+20) The \T1/lmtt/m/n/10.95 out \T1/lmr/m/n/10.95 (+20) pa-ram-e-ter
  []
@@ -824,12 +824,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 302--302
 \T1/lmr/m/n/10.95 (+20) ac-cesses \T1/lmtt/m/n/10.95 out.deferredName
  []
 
-[6] [7
+[7
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.327 \item N
-             ew issues introduced: none]
+l.308 
+      ]
 Overfull \hbox (18.51335pt too wide) in paragraph at lines 334--335
 []\T1/lmr/m/n/10.95 (-20) Path: \T1/lmtt/m/n/10.95 /m4/gson/gson/src/test/java/com/google/gson/functional/ConcurrencyTest.java 
  []
@@ -839,38 +839,38 @@ Overfull \hbox (30.01082pt too wide) in paragraph at lines 345--346
 []\T1/lmr/m/n/10.95 (-20) Path: \T1/lmtt/m/n/10.95 /m4/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java 
  []
 
-[8
-pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.381 
-      ]
+[8]
 Overfull \hbox (7.88855pt too wide) in paragraph at lines 410--411
 \T1/lmr/m/n/10.95 (-20) flagged \T1/lmtt/m/n/10.95 JsonStreamParser.java\T1/lmr/m/n/10.95 (-20) , \T1/lmtt/m/n/10.95 DefaultDateTypeAdapter.java\T1/lmr/m/n/10.95 (-20) , \T1/lmtt/m/n/10.95 SqlDateTypeAdapter.java\T1/lmr/m/n/10.95 (-20) , and
  []
 
 [9
+pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.411 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.420 
-      ] [10] (./TechTitans_Milestone4_report.aux)
+l.411 
+      ] [10] [11] (./TechTitans_Milestone4_report.aux)
 Package rerunfilecheck Info: File `TechTitans_Milestone4_report.out' has not changed.
 (rerunfilecheck)             Checksum: D7709BD3D765F749BE624F4E7358B24C;2528.
  ) 
 Here is how much of TeX's memory you used:
- 35306 strings out of 476025
- 805690 string characters out of 5790018
- 2053388 words of memory out of 5000000
+ 35309 strings out of 476025
+ 805719 string characters out of 5790018
+ 2016388 words of memory out of 5000000
  54954 multiletter control sequences out of 15000+600000
- 577355 words of font info for 137 fonts, out of 8000000 for 9000
+ 577438 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,94p,1054b,2284s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on TechTitans_Milestone4_report.pdf (10 pages, 281545 bytes).
+Output written on TechTitans_Milestone4_report.pdf (11 pages, 281975 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 262 compressed objects within 3 object streams
- 125 named destinations out of 1000 (max. 500000)
+ 301 PDF objects out of 1000 (max. 8388607)
+ 265 compressed objects within 3 object streams
+ 126 named destinations out of 1000 (max. 500000)
  39045 words of extra memory for PDF output out of 42996 (max. 10000000)
 
