@@ -97,6 +97,17 @@ The container automatically generates the following files for reproducibility an
 - repo_url.txt → URL of the cloned repository
 - loc.txt → lines of code summary
 
+### Main Tool Run Outputs
+The primary Infer analysis runs are located under `tool-outputs/`:
+- **`tool-outputs/baseline/`** — Contains the main (baseline) Infer run.
+- **`tool-outputs/validation/`** — Contains a separate validation run performed by another team member.
+
+### Additional Validation & Experiment Logs
+- **`chut/infer-validation/`** — Additional re-runs for validation, organized under `extras-infer-out/`, `proto-infer-out/`, and `gson-infer-out/`.
+- **`chut/semgrep/`** — Logs for Experiment 6.5 (Semgrep analysis).
+- **`Ex 6.4/`** — Logs for Experiment 6.4.
+- **`chubi/`** — Validation logs for Experiment 6.4.
+
 ### Notes
 
 - Ensure Docker is installed and running on your system.
