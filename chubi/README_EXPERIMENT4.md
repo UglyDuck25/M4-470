@@ -1,14 +1,14 @@
-\# Experiment 4: Stability Under Small Code Changes
+# Experiment 4: Stability Under Small Code Changes
 
 
 
-\## Modification
+## Modification
 
 A small semantics-preserving change was applied to the Gson codebase. Specifically, a local variable in `JavaVersion.java` was renamed from `num` to `digits`. This change does not affect program behavior, control flow, or data flow.
 
 
 
-\## Results
+## Results
 
 
 
@@ -30,7 +30,7 @@ A small semantics-preserving change was applied to the Gson codebase. Specifical
 
 
 
-\## Analysis
+## Analysis
 
 
 
