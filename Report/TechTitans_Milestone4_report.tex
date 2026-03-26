@@ -49,6 +49,8 @@ Haidari Alhaidari (vrl968)
 \section{Introduction}
 Static analysis examines software without executing it. In this milestone, the goal was to study behavioral bug detection with Infer and compare that style of reasoning with Semgrep's rule-based pattern matching. Our assigned repository was Gson, a Java serialization library with a moderate codebase and several concurrency-related code paths that make it a useful target for path-sensitive analysis.
 
+Static analysis operates on several aspects of a program, including program structure such as methods, classes, and modules; control flow and data flow; syntactic and semantic patterns; and relationships between program elements. This makes it useful well before runtime because it can be applied early in development, scales to large codebases, and can detect classes of issues that are rare or difficult to reproduce through testing alone.
+
 The focus of this report is not only the number of warnings produced by the tools, but also the plausibility of those warnings, the assumptions required for the reported failure paths, and the extent to which the analysis remains stable under small semantics-preserving edits. This is aligned with the milestone's emphasis on understanding why a reported issue could occur rather than simply counting findings.
 
 \section{Background}
