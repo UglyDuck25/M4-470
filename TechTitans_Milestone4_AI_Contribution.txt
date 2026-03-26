@@ -10,6 +10,7 @@ AI Usage:
 2. Chibuikem Emeka-Nwuba (esq498)
 Contribution: 22%
 AI Usage:
+AI was used to understand the two tools being used and compare them. Used AI for writing assistance and to help with proper documentation. The Infer environment configuration, and explaining the results of the tests after small, code changes. I also used AI to figure out the command to run Infer since the usual infer run --mvn didn’t work.
 
 3. Samuel Olukuwu (nds091)
 Contribution: 22%
