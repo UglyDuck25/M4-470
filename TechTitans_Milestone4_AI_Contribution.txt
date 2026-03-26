@@ -4,21 +4,21 @@ Milestone: Milestone 4
 Team Members and Contributions:
 
 1. Chut Giet (rjb863)
-Contribution: 22%
+Contribution: 20%
 AI Usage: 
 
 2. Chibuikem Emeka-Nwuba (esq498)
-Contribution: 22%
+Contribution: 20%
 AI Usage:
 AI was used to understand the two tools being used and compare them. Used AI for writing assistance and to help with proper documentation. The Infer environment configuration, and explaining the results of the tests after small, code changes. I also used AI to figure out the command to run Infer since the usual infer run --mvn didn’t work.
 
 3. Samuel Olukuwu (nds091)
-Contribution: 22%
+Contribution: 20%
 AI Usage: Ai was used in understanding implementation of the two repositories as well as for assistance in the dockerfile creation. It was also used to formalize infer report output for the stylistic changes.
 
 4. Haidari Alhaidari (vrl968)
-Contribution: 22%
-AI Usage: 
+Contribution: 20%
+AI Usage: AI was used in understanding tools and usage, generating .md files. Tracking the source code and validating the issue was done independently, researching issue type and reading through the infer documentation. AI was used in navigating and understand the given gson repository. 
 
 
 5. Ademola Obaleye (zyq049)
